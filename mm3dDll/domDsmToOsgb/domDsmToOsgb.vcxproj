@@ -169,14 +169,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\..\3rdParty\osg\include;..\..\..\3rdParty\gdal\include;..\VPB\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\3rdParty\osg\include;..\..\..\3rdParty\gdal\include;..\..\..\3rdParty\vpb\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\..\..\3rdParty\osg\lib;$(OutDir);..\VPB\lib;..\..\..\3rdParty\gdal\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\3rdParty\osg\lib;$(OutDir);..\..\..\3rdParty\vpb\lib;..\..\..\3rdParty\gdal\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>OpenThreads.lib;osg.lib;osgDB.lib;osgGA.lib;osgManipulator.lib;osgViewer.lib;osgUtil.lib;osgText.lib;vpb.lib;osgTerrain.lib;osgSim.lib;osgFX.lib;gdal_i.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>../../../lib_MapMatrix3D/domDsmToOsgb.lib</ImportLibrary>
     </Link>
