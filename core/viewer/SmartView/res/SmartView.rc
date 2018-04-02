@@ -1,0 +1,794 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日语(日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_SETCURSORTYPE DIALOG 0, 0, 140, 138
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "僇乕僜儖偺愝掕"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "僞僀僾",IDC_STATIC,5,11,17,10
+    CONTROL         "怓",IDC_COLOR_CURSOR,"Button",BS_OWNERDRAW | WS_TABSTOP,29,94,40,15
+    LTEXT           "怓",IDC_STATIC,5,100,21,8
+    PUSHBUTTON      "OK",IDOK,24,117,40,14
+    PUSHBUTTON      "僉儍儞僙儖",IDCANCEL,82,117,40,14
+    LISTBOX         IDC_LIST_CURSORS,26,11,105,77,LBS_OWNERDRAWVARIABLE | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_ADJUST DIALOG 0, 0, 251, 225
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "帇妎挷惍"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,20,145,20
+    EDITTEXT        IDC_EDIT_BRIGHTNESS,196,23,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_BRIGHTNESS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,21,11,12
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,41,145,19
+    EDITTEXT        IDC_EDIT_CONTRAST,196,44,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN_CONTRAST,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,42,10,14
+    LTEXT           "柧傞偝",IDC_STATIC,24,29,22,8
+    LTEXT           "僐儞僩儔僗僩",IDC_STATIC,12,50,37,8
+    CONTROL         "愒",IDC_CHECK_LRED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,72,24,10
+    CONTROL         "椢",IDC_CHECK_LGREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,86,72,24,10
+    CONTROL         "惵",IDC_CHECK_LBLUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,72,24,10
+    CONTROL         "愒",IDC_CHECK_RRED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,181,24,10
+    CONTROL         "椢",IDC_CHECK_RGREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,86,181,24,10
+    CONTROL         "惵",IDC_CHECK_RBLUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,181,24,10
+    GROUPBOX        "嵍夋憸",IDC_STATIC,8,8,233,99
+    CONTROL         "帺摦僸僗僩僌儔儉挷惍",IDC_CHECK_HISTOGRAM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,90,83,10
+    LTEXT           "僶儞僪",IDC_STATIC,29,73,25,8
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,129,145,20
+    EDITTEXT        IDC_EDIT_BRIGHTNESS2,196,132,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_BRIGHTNESS2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,130,11,12
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,150,145,19
+    EDITTEXT        IDC_EDIT_CONTRAST2,196,153,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN_CONTRAST2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,151,10,14
+    LTEXT           "柧傞偝",IDC_STATIC,26,138,24,8
+    LTEXT           "僐儞僩儔僗僩",IDC_STATIC,13,159,41,8
+    GROUPBOX        "",IDC_STATIC,8,117,233,99
+    CONTROL         "帺摦僸僗僩僌儔儉挷惍",IDC_CHECK_HISTOGRAM2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,198,83,10
+    LTEXT           "僶儞僪",IDC_STATIC,29,182,25,8
+    CONTROL         "塃夋憸偲嵍夋憸傪堦抳",IDC_CHECK_SAMETOLEFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,109,91,10
+END
+
+IDD_DLGBAR_IMGVIEW DIALOG 0, 0, 11, 10
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+END
+
+IDD_DIALOG_SLIDER DIALOG 0, 0, 26, 152
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_SACLE,"msctls_trackbar32",TBS_VERT | TBS_NOTICKS | WS_TABSTOP,4,0,19,150
+END
+
+IDD_DIALOG1 DIALOG 0, 0, 140, 29
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 16, "Microsoft Sans Serif"
+BEGIN
+    LTEXT           "Loading the whole image......",IDC_STATIC,17,11,106,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROPPAGE_SETCURSORTYPE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 137
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DIALOG_ADJUST, DIALOG
+    BEGIN
+        RIGHTMARGIN, 249
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_DLGBAR_IMGVIEW, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG_SLIDER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 23
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "昞帵儌乕僪"
+    BEGIN
+        MENUITEM "僗僾儕僢僩(P)",                    ID_MENU_SPLIT
+        MENUITEM "僗僥儗僆乮S乯",                     ID_MENU_STEREO
+        MENUITEM "RG 僗僥儗僆乮R乯",                  ID_MENU_RGSTEREO
+        MENUITEM "P&olarized Stereo",           ID_MENU_POLARIZED
+        MENUITEM SEPARATOR
+        MENUITEM "慄暆傪昞帵偟側偄",                    ID_MENU_NOLINEWEIGHT
+        MENUITEM "億儕僑儞偺僋儕僢僺儞僌怓傪昞帵偟側偄",          ID_MENU_NOHATCH
+        MENUITEM "夞揮僗僥儗僆",                      ID_MENU_INVERSE_STEREO
+        MENUITEM SEPARATOR
+        MENUITEM "Undo View Positioning",       ID_MENU_VIEWUNDO
+        MENUITEM "Redo View Positioning",       ID_MENU_VIEWREDO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "XtremeView DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "XtremeView"
+            VALUE "LegalCopyright", "挊嶌尃強桳 (C) 2005-2006 VisionTek Inc."
+            VALUE "OriginalFilename", "XtremeView.DLL"
+            VALUE "ProductName", "MapMatrix丂傾僾儕働乕僔儑儞"
+            VALUE "ProductVersion", "2006"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TIPS_REFRESH        "峏怴"
+    IDS_TIPS_ZOOMIN         "奼戝"
+    IDS_TIPS_ZOOMOUT        "弅彫"
+    IDS_TIPS_ZOOMFIT        "慡昞帵"
+    IDS_TIPS_ZOOMRECT       "慖戰晹暘偺奼戝"
+    IDS_TIPS_CURSORSETTING  "僇乕僜儖愝掕"
+    IDS_TIPS_VIEWADJUST     "帇妎挷惍"
+    IDS_TIPS_HANDMOVE       "僪儔僢僌"
+    IDS_TIPS_STEREO         "僗僥儗僆昞帵/僗僋儕乕儞暿昞帵"
+    IDS_LOADCURSOR_ERR      "僇乕僜儖僼傽僀儖偺儘乕僪偑僄儔乕: %s . "
+    IDS_ERR_DISPLAYGLCURSOR "僇乕僜乕儖偺昞帵偑僄儔乕"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_STEREO          "Stereo"
+    ID_MENU_SPLIT           "嵍塃夋憸偺愗暘昞帵"
+    ID_MENU_RGSTEREO        "RG Stereo"
+    ID_MENU_NOHATCH         "億儕僑儞偺僋儕僢僺儞僌怓傪昞帵偟傑偣傫\n億儕僑儞偺僋儕僢僺儞僌怓傪昞帵偟傑偣傫"
+    ID_MENU_REVERSE_DISPLAYORDER "夞揮儀僋僩儖昞帵弴斣\n夞揮儀僋僩儖昞帵弴斣"
+    ID_MENU_NOLINEWEIGHT    "儔僀儞偺暆傪昞帵偟傑偣傫\n儔僀儞偺暆傪昞帵偟傑偣傫"
+    ID_MENU_INVERSE_STEREO  "夞揮僗僥儗僆\n夞揮僗僥儗僆"
+    IDS_TEXT_DEFAULTFONT    "Arial"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_POLARIZED       "Polarized Stereo\nPolarized Stereo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_VIEWUNDO        "Undo View Positioning\nUndo View Positioning"
+    ID_MENU_VIEWREDO        "Redo View Positioning\nRedo View Positioning"
+END
+
+#endif    // 日语(日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLGBAR_IMGVIEW DIALOGEX 0, 0, 11, 10
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif", 0, 0, 0x0
+BEGIN
+END
+
+IDD_DIALOG_ADJUST DIALOG 0, 0, 208, 217
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "视觉调节"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,43,14,103,20
+    EDITTEXT        IDC_EDIT_BRIGHTNESS,152,20,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_BRIGHTNESS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,176,18,11,12
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,43,36,103,19
+    EDITTEXT        IDC_EDIT_CONTRAST,152,41,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN_CONTRAST,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,176,39,10,14
+    LTEXT           "亮度:",IDC_STATIC,24,26,19,8
+    LTEXT           "对比度:",IDC_STATIC,17,47,27,8
+    CONTROL         "红",IDC_CHECK_LRED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,49,67,24,10
+    CONTROL         "绿",IDC_CHECK_LGREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,67,24,10
+    CONTROL         "蓝",IDC_CHECK_LBLUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,99,67,24,10
+    CONTROL         "红",IDC_CHECK_RRED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,49,173,24,10
+    CONTROL         "绿",IDC_CHECK_RGREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,173,24,10
+    CONTROL         "蓝",IDC_CHECK_RBLUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,98,173,24,10
+    GROUPBOX        "左片",IDC_STATIC,9,8,191,94
+    LTEXT           "波段:",IDC_STATIC,25,68,19,8
+    CONTROL         "自动直方图调整",IDC_CHECK_HISTOGRAM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,49,85,72,10
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,43,120,103,20
+    EDITTEXT        IDC_EDIT_BRIGHTNESS2,153,127,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_BRIGHTNESS2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,177,124,11,12
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,43,143,103,19
+    EDITTEXT        IDC_EDIT_CONTRAST2,153,147,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN_CONTRAST2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,177,145,10,14
+    LTEXT           "亮度:",IDC_STATIC,25,132,19,8
+    LTEXT           "对比度:",IDC_STATIC,17,153,27,8
+    GROUPBOX        "",IDC_STATIC,9,108,191,101
+    LTEXT           "波段:",IDC_STATIC,25,174,19,8
+    CONTROL         "自动直方图调整",IDC_CHECK_HISTOGRAM2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,49,191,72,10
+    CONTROL         "右片与左片一致",IDC_CHECK_SAMETOLEFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,108,72,10
+END
+
+IDD_PROPPAGE_SETCURSORTYPE DIALOG 0, 0, 140, 138
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置测标"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST_CURSORS,26,11,105,77,LBS_OWNERDRAWVARIABLE | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "形状",IDC_STATIC,8,11,17,10
+    CONTROL         "颜色",IDC_COLOR_CURSOR,"Button",BS_OWNERDRAW | WS_TABSTOP,26,94,40,15
+    LTEXT           "颜色",IDC_STATIC,8,101,17,8
+    PUSHBUTTON      "确定",IDOK,23,117,40,14
+    PUSHBUTTON      "取消",IDCANCEL,81,117,40,14
+END
+
+IDD_DIALOG1 DIALOG 0, 0, 140, 29
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 16, "Microsoft Sans Serif"
+BEGIN
+    LTEXT           "Loading the whole image......",IDC_STATIC,17,11,106,8
+END
+
+IDD_DIALOG_SLIDER DIALOG 0, 0, 26, 152
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_SACLE,"msctls_trackbar32",TBS_VERT | TBS_NOTICKS | WS_TABSTOP,4,0,19,150
+END
+
+IDD_DUMMY DIALOGEX 0, 0, 11, 10
+STYLE DS_SETFONT | WS_POPUP
+FONT 8, "Microsoft Sans Serif", 0, 0, 0x0
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DLGBAR_IMGVIEW, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG_ADJUST, DIALOG
+    BEGIN
+        RIGHTMARGIN, 206
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_PROPPAGE_SETCURSORTYPE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 137
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_DIALOG_SLIDER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 23
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DUMMY, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "显示模式"
+    BEGIN
+        MENUITEM "分屏(&P)",                      ID_MENU_SPLIT
+        MENUITEM "真立体(&S)",                     ID_MENU_STEREO
+        MENUITEM "红绿立体(&R)",                    ID_MENU_RGSTEREO
+        MENUITEM "偏振立体",                        ID_MENU_POLARIZED
+        MENUITEM SEPARATOR
+        MENUITEM "不显示线宽",                       ID_MENU_NOLINEWEIGHT
+        MENUITEM "不显示面域的填充色",                   ID_MENU_NOHATCH
+        MENUITEM "反立体",                         ID_MENU_INVERSE_STEREO
+        MENUITEM SEPARATOR
+        MENUITEM "恢复到上个窗口位置",                   ID_MENU_VIEWUNDO
+        MENUITEM "重回到下个窗口位置",                   ID_MENU_VIEWREDO
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\XtremeView.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BUTTON_ZOOMOUT      BITMAP                  "res\\BtnZoomOut.bmp"
+IDB_BUTTON_ZOOMIN       BITMAP                  "res\\BtnZoomIn.bmp"
+IDB_BUTTON_HANDMOVE     BITMAP                  "res\\BtnHand.bmp"
+IDB_BUTTON_STEREO       BITMAP                  "res\\BtnStereo.bmp"
+IDB_BUTTON_REFRESH      BITMAP                  "res\\BtnRefresh.bmp"
+IDB_BUTTON_ADJUST       BITMAP                  "res\\BtnAdjust.bmp"
+IDB_BUTTON_CURSOR       BITMAP                  "res\\BtnCursor.bmp"
+IDB_BITMAP_CURSOR       BITMAP                  "res\\DefCursor.bmp"
+IDB_BUTTON_ZOOMFIT      BITMAP                  "res\\BtnZoomFit.bmp"
+IDB_BUTTON_ZOOMRECT     BITMAP                  "res\\BtnZoomRect.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR                  "res\\Hand.cur"
+IDC_ZOOMRECT            CURSOR                  "res\\Zoomrect.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GPUCODE
+//
+
+IDR_BICUBIC_FRAG        GPUCODE                 "res\\bicubic.frag"
+IDR_BICUBIC_VERT        GPUCODE                 "res\\bicubic.vert"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TIPS_REFRESH        "刷新"
+    IDS_TIPS_ZOOMIN         "放大"
+    IDS_TIPS_ZOOMOUT        "缩小"
+    IDS_TIPS_ZOOMFIT        "全图显示"
+    IDS_TIPS_ZOOMRECT       "拉框放大"
+    IDS_TIPS_CURSORSETTING  "测标设置"
+    IDS_TIPS_VIEWADJUST     "视觉调节"
+    IDS_TIPS_HANDMOVE       "拖动"
+    IDS_TIPS_STEREO         "立体或分屏显示"
+    IDS_LOADCURSOR_ERR      "无法装载光标文件: %s . "
+    IDS_ERR_DISPLAYGLCURSOR "测标显示遇到故障."
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_STEREO          "真实立体"
+    ID_MENU_SPLIT           "左右片切分显示"
+    ID_MENU_RGSTEREO        "红绿立体"
+    ID_MENU_NOHATCH         "不显示面域的填充色\n不显示面域的填充色"
+    ID_MENU_REVERSE_DISPLAYORDER "反转矢量显示次序\n反转矢量显示次序"
+    ID_MENU_NOLINEWEIGHT    "不显示线宽\n不显示线宽"
+    ID_MENU_INVERSE_STEREO  "反立体\n反立体"
+    IDS_TEXT_DEFAULTFONT    "黑体"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_POLARIZED       "偏振立体\n偏振立体"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_VIEWUNDO        "恢复到上个窗口位置\n恢复到上个窗口位置"
+    ID_MENU_VIEWREDO        "重回到下个窗口位置\n重回到下个窗口位置"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_CLSTYPE   "对象类型"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_SETCURSORTYPE DIALOG 0, 0, 140, 138
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cursor Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST_CURSORS,29,11,105,77,LBS_OWNERDRAWVARIABLE | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Type",IDC_STATIC,5,11,17,10
+    CONTROL         "Color",IDC_COLOR_CURSOR,"Button",BS_OWNERDRAW | WS_TABSTOP,29,94,40,15
+    LTEXT           "Color",IDC_STATIC,5,100,21,8
+    PUSHBUTTON      "OK",IDOK,24,117,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,82,117,40,14
+END
+
+IDD_DLGBAR_IMGVIEW DIALOG 0, 0, 11, 10
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+END
+
+IDD_DIALOG_ADJUST DIALOG 0, 0, 251, 225
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Adjust"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,20,145,20
+    EDITTEXT        IDC_EDIT_BRIGHTNESS,196,23,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_BRIGHTNESS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,21,11,12
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,41,145,19
+    EDITTEXT        IDC_EDIT_CONTRAST,196,44,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN_CONTRAST,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,42,10,14
+    LTEXT           "Brightness:",IDC_STATIC,15,29,37,8
+    LTEXT           "Contrast:",IDC_STATIC,22,50,32,8
+    CONTROL         "Red",IDC_CHECK_LRED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,72,29,10
+    CONTROL         "Green",IDC_CHECK_LGREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,86,72,35,10
+    CONTROL         "Blue",IDC_CHECK_LBLUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,72,30,10
+    CONTROL         "Red",IDC_CHECK_RRED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,181,29,10
+    CONTROL         "Green",IDC_CHECK_RGREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,86,181,35,10
+    CONTROL         "Blue",IDC_CHECK_RBLUE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,181,30,10
+    GROUPBOX        "Left Image",IDC_STATIC,8,8,233,99
+    CONTROL         "Auto Histogram",IDC_CHECK_HISTOGRAM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,90,64,10
+    LTEXT           "Brand:",IDC_STATIC,29,73,25,8
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,129,145,20
+    EDITTEXT        IDC_EDIT_BRIGHTNESS2,196,132,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_BRIGHTNESS2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,130,11,12
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP,50,150,145,19
+    EDITTEXT        IDC_EDIT_CONTRAST2,196,153,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_SPIN_CONTRAST2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,151,10,14
+    LTEXT           "Brightness:",IDC_STATIC,15,138,37,8
+    LTEXT           "Contrast:",IDC_STATIC,22,159,32,8
+    GROUPBOX        "",IDC_STATIC,8,117,233,99
+    CONTROL         "Auto Histogram",IDC_CHECK_HISTOGRAM2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,56,198,64,10
+    LTEXT           "Brand:",IDC_STATIC,29,182,25,8
+    CONTROL         "Is Right same to Left",IDC_CHECK_SAMETOLEFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,116,81,10
+END
+
+IDD_DIALOG_SLIDER DIALOG 0, 0, 26, 152
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_SACLE,"msctls_trackbar32",TBS_VERT | TBS_NOTICKS | WS_TABSTOP,4,0,19,150
+END
+
+IDD_DIALOG1 DIALOG 0, 0, 140, 29
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 16, "Microsoft Sans Serif"
+BEGIN
+    LTEXT           "Loading the whole image......",IDC_STATIC,17,11,106,8
+END
+
+IDD_DUMMY DIALOGEX 0, 0, 11, 10
+STYLE DS_SETFONT | WS_POPUP
+FONT 8, "Microsoft Sans Serif", 0, 0, 0x0
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROPPAGE_SETCURSORTYPE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 137
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DLGBAR_IMGVIEW, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG_ADJUST, DIALOG
+    BEGIN
+        RIGHTMARGIN, 249
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_DIALOG_SLIDER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 23
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_DUMMY, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "Display"
+    BEGIN
+        MENUITEM "S&plit",                      ID_MENU_SPLIT
+        MENUITEM "&Stereo",                     ID_MENU_STEREO
+        MENUITEM "&RG Stereo",                  ID_MENU_RGSTEREO
+        MENUITEM "P&olarized Stereo",           ID_MENU_POLARIZED
+        MENUITEM SEPARATOR
+        MENUITEM "Disable Line Weight",         ID_MENU_NOLINEWEIGHT
+        MENUITEM "Do not Fill Polygons",        ID_MENU_NOHATCH
+        MENUITEM "Inverse Stereo",              ID_MENU_INVERSE_STEREO
+        MENUITEM SEPARATOR
+        MENUITEM "Undo View Positioning",       ID_MENU_VIEWUNDO
+        MENUITEM "Redo View Positioning",       ID_MENU_VIEWREDO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "XtremeView DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "XtremeView"
+            VALUE "LegalCopyright", "Copyright (C) 2005-2006 VisionTek Inc."
+            VALUE "OriginalFilename", "XtremeView.DLL"
+            VALUE "ProductName", "MapMatrix"
+            VALUE "ProductVersion", "2006"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TIPS_REFRESH        "Refresh"
+    IDS_TIPS_ZOOMIN         "Zoom In"
+    IDS_TIPS_ZOOMOUT        "Zoom Out"
+    IDS_TIPS_ZOOMFIT        "Zoom Fit"
+    IDS_TIPS_ZOOMRECT       "Zoom Rect"
+    IDS_TIPS_CURSORSETTING  "Cursor Settings"
+    IDS_TIPS_VIEWADJUST     "Adjust View"
+    IDS_TIPS_HANDMOVE       "Move"
+    IDS_TIPS_STEREO         "Stereo/Spit Screen"
+    IDS_LOADCURSOR_ERR      "Failed to load the cursor file: %s . "
+    IDS_ERR_DISPLAYGLCURSOR "Error in display cursor."
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_STEREO          "Stereo"
+    ID_MENU_SPLIT           "Split"
+    ID_MENU_RGSTEREO        "RG Stereo"
+    ID_MENU_NOHATCH         "Do not Fill Polygons\nDo not Fill Polygons"
+    ID_MENU_REVERSE_DISPLAYORDER 
+                            "Reverse Vectors Display Order\nReverse Vectors Display Order"
+    ID_MENU_NOLINEWEIGHT    "Disable Line Weight\nDisable Line Weight"
+    ID_MENU_INVERSE_STEREO  "Inverse Stereo\nInverse Stereo"
+    IDS_TEXT_DEFAULTFONT    "Arial"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_POLARIZED       "Polarized Stereo\nPolarized Stereo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MENU_VIEWUNDO        "Undo View Positioning\nUndo View Positioning"
+    ID_MENU_VIEWREDO        "Redo View Positioning\nRedo View Positioning"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\XtremeView.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
