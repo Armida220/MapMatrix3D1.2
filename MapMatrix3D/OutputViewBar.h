@@ -55,6 +55,12 @@ protected:
 	//}}AFX_MSG
 	
 	DECLARE_MESSAGE_MAP()
+
+	afx_msg HBRUSH CtlColor(CDC* pDC, UINT nCtlColor);
+
+protected:
+
+	CBrush m_brush;
 };
 
 
@@ -102,6 +108,9 @@ protected:
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
+	afx_msg HBRUSH CtlColor(CDC* pDC, UINT nCtlColor);
+
+
 	//}}AFX_MSG
 	
 	DECLARE_MESSAGE_MAP()
@@ -115,6 +124,8 @@ private:
 	int m_nHistPos;
 
 	InputType m_nInputType;
+
+	CBrush m_brush;
 };
 
 
@@ -221,6 +232,10 @@ protected:
 	CString m_keyfilepath;
 
 	BOOL m_bChangePrompt;
+
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+
+	CBrush m_brush;
 };
 
 #endif // !defined(AFX_OUTPUTVIEWBAR_H__3095A6D2_3E8F_48AB_8312_9209282D9395__INCLUDED_)
