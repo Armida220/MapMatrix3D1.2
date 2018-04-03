@@ -54,7 +54,7 @@ BOOL CChildFrame::PreCreateWindow(CREATESTRUCT& cs)
 	if (!CMDIChildWndEx::PreCreateWindow(cs))
 		return FALSE;
 	
-	cs.style &= ~(LONG)FWS_ADDTOTITLE;
+	/*cs.style &= ~(LONG)FWS_ADDTOTITLE;*/
 	//cs.style &= ~WS_SYSMENU;
 	//cs.style &= ~WS_HSCROLL;
 	//cs.style &= ~WS_VSCROLL;
@@ -217,7 +217,7 @@ void CChildFrame::OnUpdateFrameTitle(BOOL bAddToTitle)
 void CChildFrame::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp)
 {
 	// TODO: Add your message handler code here and/or call default
-	/*CMDIChildWndEx::OnNcCalcSize(bCalcValidRects, lpncsp);*/
+	CMDIChildWndEx::OnNcCalcSize(bCalcValidRects, lpncsp);
 }
 
 

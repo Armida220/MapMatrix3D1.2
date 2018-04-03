@@ -43,7 +43,7 @@ BEGIN_MESSAGE_MAP(COutputEdit, CEdit)
 	ON_WM_KEYDOWN()
 	ON_WM_CHAR()
 	ON_WM_SETFOCUS()
-	//}}AFX_MSG_MAP
+	ON_WM_CTLCOLOR_REFLECT()
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -174,6 +174,18 @@ void COutputEdit::Output(LPCTSTR strText)
 }
 
 
+HBRUSH COutputEdit::CtlColor(CDC* pDC, UINT nCtlColor)
+{
+	// TODO:  Change any attributes of the DC here
+	pDC->SetBkColor(RGB(50, 50, 50));
+	m_brush.CreateSolidBrush(RGB(50, 50, 50));
+	pDC->SetTextColor(RGB(255, 255, 255));           // 字体色彩   
+	// TODO:  Return a different brush if the default is not desired
+	return m_brush;
+}
+
+
+
 
 /////////////////////////////////////////////////////////////////////////////
 // CInputEdit
@@ -205,6 +217,7 @@ BEGIN_MESSAGE_MAP(CInputEdit, CEdit)
 	ON_WM_LBUTTONUP()
 	ON_WM_MOUSEMOVE()
 	ON_WM_LBUTTONDBLCLK()
+	ON_WM_CTLCOLOR_REFLECT()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -486,6 +499,17 @@ void CInputEdit::OnLButtonDblClk(UINT nFlags, CPoint point)
 	SetSel(index0,index1);
 }
 
+HBRUSH CInputEdit::CtlColor(CDC* pDC, UINT nCtlColor)
+{
+	// TODO:  Change any attributes of the DC here
+	pDC->SetBkColor(RGB(50, 50, 50));
+	m_brush.CreateSolidBrush(RGB(50, 50, 50));
+	pDC->SetTextColor(RGB(255, 255, 255));           // 字体色彩   
+	// TODO:  Return a different brush if the default is not desired
+	return m_brush;
+}
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -527,6 +551,7 @@ BEGIN_MESSAGE_MAP(COutputViewBar, CDockablePane)
 	ON_MESSAGE(WM_KEYONE,OnKeyOne)
 	ON_MESSAGE(WM_KEYINSTRING,OnKeyinString)
 	ON_MESSAGE(WM_COMMANDSELCHANGE,OnSearchListSelChange)
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
 
 #include "MainFrm.h"
@@ -1707,4 +1732,13 @@ void COutputViewBar::SortSearchRsltList(SortItemArray& arr)
 			}
 		}
 	}
+}
+
+HBRUSH COutputViewBar::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDockablePane::OnCtlColor(pDC, pWnd, nCtlColor);
+	m_brush.CreateSolidBrush(RGB(50, 50, 50));
+	pDC->SetTextColor(RGB(255, 255, 255));
+	// TODO:  Return a different brush if the default is not desired
+	return m_brush;
 }

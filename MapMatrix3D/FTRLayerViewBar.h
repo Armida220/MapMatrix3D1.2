@@ -192,22 +192,15 @@ protected:
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 
-	
-	afx_msg void OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp);
-
-	afx_msg void OnNcPaint();
-
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 
 protected:
-	virtual BOOL CanBeClosed() const { return FALSE; }
 
-	virtual BOOL Dock(CBasePane* pTargetBar, LPCRECT lpRect, AFX_DOCK_METHOD dockMethod);
 
-	virtual void DrawCaption(
-		CDC* pDC,
-		CRect rectCaption){}
-
+	//virtual void DrawCaption(
+	//	CDC* pDC,
+	/*	CRect rectCaption){}
+*/
 protected:
 	CBrush m_brush;
 };
