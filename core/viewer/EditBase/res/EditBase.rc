@@ -1,0 +1,611 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日语(日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "XtremeView DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "XtremeView"
+            VALUE "LegalCopyright", "挊嶌尃強桳 (C) 2005-2006 VisionTek Inc."
+            VALUE "OriginalFilename", "XtremeView.DLL"
+            VALUE "ProductName", "MapMatrix丂傾僾儕働乕僔儑儞"
+            VALUE "ProductVersion", "2006"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_CMDPLANE_CLOSE      "暵偠傞"
+    IDS_CMDPLANE_POINT      "師偺億僀儞僩偺巜掕"
+    IDS_CMDDESC_CLOSE       "帺摦暵偠傞億儕儔僀儞傪擖椡偟傑偡偐丅"
+    IDS_CMDTIP_LINE         "億儕儔僀儞"
+    IDS_CMDTIP_CURVE        "僗僾儔僀儞"
+    IDS_CMDTIP_ARC          "傾乕僋"
+    IDS_CMDTIP_HIDE         "HideLine"
+    IDS_CMDTIP_SYNCH        "僗僩儕乕儉儔僀儞"
+    IDS_CMDPLANE_LINETYPE   "儔僀儞僞僀僾"
+    IDS_CMDNAME_PLACECURVE  "儔僀儞惢恾"
+    IDS_OUTPUT_CMDPROMPT    "僐儅儞僪"
+    IDS_FIELDNAME_GEOCLASS  "婔壗懱僞僀僾"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_COLOR     "怓"
+    IDS_FIELDNAME_CLSTYPE   "懳徾僞僀僾"
+    IDS_FIELDNAME_DELETED   "嶍彍"
+    IDS_FIELDNAME_ID        "昗幆斣崋"
+    IDS_FIELDNAME_POINTANGLE "Angle"
+    IDS_FIELDNAME_CURVECLOSED "Closed"
+    IDS_FIELDNAME_TEXT_CONTENT "撪梕"
+    IDS_FIELDNAME_TEXT_FONT "僼僅儞僩"
+    IDS_FIELDNAME_TEXT_CHARWIDTHS "暥帤暆"
+    IDS_FIELDNAME_TEXT_CHARHEIGHT "暥帤崅"
+    IDS_FIELDNAME_TEXT_ALIGNTYPE "Alignment"
+    IDS_FIELDNAME_TEXT_INCLINE "曽幃"
+    IDS_FIELDNAME_TEXT_INCLINEANGLE "曄宍妏搙"
+    IDS_FIELDNAME_TEXT_PLACETYPE "攔楍曽幃"
+    IDS_FIELDNAME_TEXT_CHARINTVS "暥帤娫妘"
+    IDS_FIELDNAME_TEXT_LINEINTVS "儔僀儞娫妘"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_CURVE_CLOSED "暵嵔忬懺"
+    IDS_FIELDNAME_DIRPOINT_ANGLE "Angle"
+    IDS_FIELDNAME_GEOCURVE_WIDTH "Parallel Interval"
+    IDS_CMDNAME_PLACESURFACE "柺擖椡"
+    IDS_CMDNAME_PLACELINE   "儔僀儞擖椡"
+    IDS_CMDNAME_PLACEPOINT  "億僀儞僩偺擖椡"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_SHAPE     "Graphics"
+    IDS_CMDPLANE_RECTIFY    "捈妏壔偱姰椆"
+    IDS_CMDNAME_PLACEPARAL  "暯峴慄擖椡"
+    IDS_DEFFONT             "Arial"
+    IDS_EDITVERTEX_PT       "Edit Vertex:"
+    IDS_CMDTIP_VERTEXINFO   "僉乕僲乕僪: 億僀儞僩斣崋 %d, 嵗昗 %.4f, %.4f, %.4f"
+    IDS_CMDTIP_CTRLPTINFO   "婎弨揰: 嵗昗 %.4f, %.4f, %.4f \n"
+    IDS_CMDPLANE_OPENIFSNAP "捀揰僗僫僢僾帪偵暵偠傜傟傑偣傫丅"
+    IDS_CMDPLANE_TOLERANCE  "嫋梕抣"
+    IDS_CMDPLANE_AUTOCLOSETOLER "嫋梕抣偱帺摦暵偠傞"
+    IDS_CMDPLANE_POSTSMOOTH "Post Smooth"
+    IDS_CMDPLANE_FASTCURVE  "Fast Display For Curves"
+    IDS_YES                 "Yes"
+    IDS_NO                  "No"
+    IDS_OUTPUT_CANCEL       "Cancel"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMDNAME_DELVERTEX   "僲乕僪嶍彍"
+    IDS_CMDTIP_CLICKOK      "嵍儃僞儞偱慖戰偟偨懳徾埥偼嬻敀偲偙傠傪僋儕僢僋偟偰丄憖嶌傪妋擣偟傑偡丅傑偨偼偦偺懠偺懳徾傪慖戰偟偰丄憖嶌懳徾傪曄峏偟傑偡丅塃儃僞儞偱憖嶌傪僉儍儞僙儖偟傑偡丅\n"
+    IDS_STRING_SELECT       "Start Select\n"
+    IDS_CMDPLANE_REFTOLER   "Tolerance Of Sharing Overlap"
+    IDS_CMDPLANE_REVERSE    "Reverse"
+    IDS_CMDTIP_3ARC         "Three Point Arc"
+    IDS_FIELDNAME_SYMBOLIZETEXT "Symbolize Text"
+    IDS_FIELDNAME_GEOSYMBOLNAME "Symbol Name"
+    IDS_FIELDNAME_FTRCODE   "Feature Code"
+    IDS_FIELDNAME_FTRVISIBLE "Visible"
+    IDS_CMDPLANE_TRACKLINE  "Track Line"
+    IDS_FIELDNAME_GEOCURVE_DHEIGHT "Relative Height"
+END
+
+#endif    // 日语(日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_CURVE_CLOSED "闭合状态"
+    IDS_FIELDNAME_DIRPOINT_ANGLE "旋转角度"
+    IDS_FIELDNAME_GEOCURVE_WIDTH "平行线宽度"
+    IDS_CMDNAME_PLACESURFACE "面绘制"
+    IDS_CMDNAME_PLACELINE   "线绘制"
+    IDS_CMDNAME_PLACEPOINT  "点绘制"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMDPLANE_CLOSE      "闭合"
+    IDS_CMDPLANE_POINT      "指定下一点"
+    IDS_CMDDESC_CLOSE       "是否放置自动闭合的线串"
+    IDS_CMDTIP_LINE         "线串"
+    IDS_CMDTIP_CURVE        "样条"
+    IDS_CMDTIP_ARC          "圆弧"
+    IDS_CMDTIP_HIDE         "隐藏线"
+    IDS_CMDTIP_SYNCH        "流曲线"
+    IDS_CMDPLANE_LINETYPE   "线型"
+    IDS_CMDNAME_PLACECURVE  "线绘制"
+    IDS_OUTPUT_CMDPROMPT    "命令"
+    IDS_FIELDNAME_GEOCLASS  "几何体类型"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_COLOR     "颜色"
+    IDS_FIELDNAME_CLSTYPE   "对象类型"
+    IDS_FIELDNAME_DELETED   "删除"
+    IDS_FIELDNAME_ID        "标识号"
+    IDS_FIELDNAME_POINTANGLE "角度"
+    IDS_FIELDNAME_CURVECLOSED "闭合"
+    IDS_FIELDNAME_TEXT_CONTENT "文本内容"
+    IDS_FIELDNAME_TEXT_FONT "字体名"
+    IDS_FIELDNAME_TEXT_CHARWIDTHS "字宽倍率"
+    IDS_FIELDNAME_TEXT_CHARHEIGHT "字体大小"
+    IDS_FIELDNAME_TEXT_ALIGNTYPE "对齐方式"
+    IDS_FIELDNAME_TEXT_INCLINE "倾斜方式"
+    IDS_FIELDNAME_TEXT_INCLINEANGLE "倾斜角度"
+    IDS_FIELDNAME_TEXT_PLACETYPE "排列方式"
+    IDS_FIELDNAME_TEXT_CHARINTVS "字间距倍率"
+    IDS_FIELDNAME_TEXT_LINEINTVS "行间距倍率"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_SHAPE     "几何信息"
+    IDS_CMDPLANE_RECTIFY    "结束时直角化"
+    IDS_CMDNAME_PLACEPARAL  "平行线绘制"
+    IDS_DEFFONT             "黑体"
+    IDS_EDITVERTEX_PT       "编辑点:"
+    IDS_CMDTIP_VERTEXINFO   "关键节点: 点号 %d, 坐标 %.4f, %.4f, %.4f"
+    IDS_CMDTIP_CTRLPTINFO   "控制点:  坐标 %.4f, %.4f, %.4f \n"
+    IDS_CMDPLANE_OPENIFSNAP "端点捕捉时不闭合"
+    IDS_CMDPLANE_TOLERANCE  "容差"
+    IDS_CMDPLANE_AUTOCLOSETOLER "自动闭合容差"
+    IDS_CMDPLANE_POSTSMOOTH "采集后光滑"
+    IDS_CMDPLANE_FASTCURVE  "采集样条曲线时快速显示"
+    IDS_YES                 "是"
+    IDS_NO                  "否"
+    IDS_OUTPUT_CANCEL       "取消"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMDNAME_DELVERTEX   "删除节点"
+    IDS_CMDTIP_CLICKOK      "左键点击空白处，确定选择，或者选择其他地物用来改变操作对象，右键取消操作\n"
+    IDS_STRING_SELECT       "启动选择操作\n"
+    IDS_CMDPLANE_REFTOLER   "共线引用的容差"
+    IDS_CMDPLANE_REVERSE    "反向"
+    IDS_CMDTIP_3ARC         "三点弧"
+    IDS_FIELDNAME_SYMBOLIZETEXT "符号化注记"
+    IDS_FIELDNAME_GEOSYMBOLNAME "符号名称"
+    IDS_FIELDNAME_FTRCODE   "标识码"
+    IDS_FIELDNAME_FTRVISIBLE "显示"
+    IDS_CMDPLANE_TRACKLINE  "重复线跟踪"
+    IDS_FIELDNAME_GEOCURVE_DHEIGHT "平行线高程差"
+    IDS_FIELDNAME_FTRPURPOSE "用途"
+    IDS_FIELDNAME_GEOKX     "横向比例"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_GEOKY     "纵向比例"
+    IDS_FIELDNAME_GEOROTATEANG "旋转角度"
+    IDS_FIELDNAME_GEOCOVERTYPE "压盖类型"
+    IDS_FIELDNAME_GEOLINETYPESCALE "线型比例"
+    IDS_FIELDNAME_GEOLINEWIDTHSCALE "线宽比例"
+    IDS_FIELDNAME_GEOCELLSCALE "图元比例"
+    IDS_FIELDNAME_GEOCELLANGLE "图元旋转角度"
+    IDS_FIELDNAME_GEOINTVSCALE "间隔比例"
+    IDS_FIELDNAME_GEOXSTARTOFF "水平起点偏移"
+    IDS_FIELDNAME_GEOWIDTH  "全局线宽"
+    IDS_FIELDNAME_GEOEXTENDDIS "压盖外扩距离"
+    IDS_CMDNAME_MOVE        "移动"
+    IDS_FIELDNAME_DISPLAYORDER "显示顺序"
+    IDS_FIELDNAME_GROUPID   "编组号"
+    IDS_CMDTIP_NODEWID      "节点线宽"
+    IDS_FIELDNAME_GEOYSTARTOFF "垂直起点偏移"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_TEXTANGLE "文字串角度"
+    IDS_FIELDNAME_CHARANGLE "字符角度"
+    IDS_FIELDNAME_LENGTH    "长度"
+    IDS_FIELDNAME_ANGLE     "角度"
+    IDS_CMDNAME_INSERTVERTEX "插入节点"
+    IDS_CMDNAME_EDITVERTEX  "修改节点"
+    IDS_FIELDNAME_LINETYPEXOFF "线型起点偏移"
+    IDS_FIELDNAME_SYMBOLIZEFLAG "特殊符号标志"
+    IDS_FIELDNAME_CREATETIME "创建时间"
+    IDS_FIELDNAME_MODIFYTIME "修改时间"
+    IDS_CMDTIP_DISFAR       "采集点不在限差范围内，请重新采集！"
+    IDS_CMDPLANE_MULPTBUILDPT "多点构点"
+    IDS_CMDPLANE_BUILDPTTOLERANCE "多点构点容差"
+    IDS_FIELDNAME_TEXT_OTHERFLAG "其他标志位"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TIP_RESET_QUERYENGINE "正在重置搜索引擎...\n"
+    IDS_LAYER_INFO_LOSED    "图层 %s 的信息已丢失!"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEFLAYER_NAMET      "缺省注记"
+    IDS_DEFLAYER_NAMEP      "缺省点"
+    IDS_DEFLAYER_NAMEL      "缺省线"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DEFLAYER_NAMES      "缺省面"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_GEOCLASS2 "几何体类型"
+    IDS_FIELDNAME_COLOR2    "颜色"
+    IDS_FIELDNAME_CLSTYPE2  "对象类型"
+    IDS_FIELDNAME_DELETED2  "删除"
+    IDS_FIELDNAME_ID2       "标识号"
+    IDS_FIELDNAME_VISIBLE   "显示"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_LOCKED    "锁定"
+    IDS_FIELDNAME_MAPNAME   "图幅名"
+    IDS_FIELDNAME_LAYERNAME "层名"
+    IDS_FIELDNAME_LAYERID   "层码"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_GROUPNAME "层组名"
+    IDS_GEO_DCURVE          "双线"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_DEFCOLOR  "缺省颜色"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_INHERENT  "本地层"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_SYMBOL    "符号化"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SPECIALGROUP        "独立符号项"
+    IDS_UVS_DISCONNECT      "UVS断开连接，请备份数据，联系管理员检查网络"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LOAD_FEATURES       "正在加载地物..."
+    IDS_LOAD_FINISH         "加载完成"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_POINT               "点"
+    IDS_DIRPOINT            "有向点"
+    IDS_LINE                "线"
+    IDS_PARLINE             "平行线"
+    IDS_SURFACE             "面"
+    IDS_TEXT                "文本"
+    IDS_NO_SUPPORT          "该符号不支持该地物类型,添加失败"
+    IDS_NO_CELL             "图元库无图元,添加失败!"
+    IDS_NO_LINE             "线型库无线型,是否新建线型?"
+    IDS_CHK_MARK            "标记"
+    IDS_SAVE_SUCCEED        "保存成功!"
+    IDS_CHK_IDX             "序号"
+    IDS_SURFACEPOINT        "面域点"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "XtremeView DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "XtremeView"
+            VALUE "LegalCopyright", "Copyright (C) 2005-2006 VisionTek Inc."
+            VALUE "OriginalFilename", "XtremeView.DLL"
+            VALUE "ProductName", "MapMatrix"
+            VALUE "ProductVersion", "2006"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_CURVE_CLOSED "Closed"
+    IDS_FIELDNAME_DIRPOINT_ANGLE "Oriented Point Angle"
+    IDS_FIELDNAME_GEOCURVE_WIDTH "Parallel Interval"
+    IDS_CMDNAME_PLACESURFACE "Place Surface"
+    IDS_CMDNAME_PLACELINE   "Place Line"
+    IDS_CMDNAME_PLACEPOINT  "Place Point"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMDPLANE_CLOSE      "Closed"
+    IDS_CMDPLANE_POINT      "Input a data point"
+    IDS_CMDDESC_CLOSE       "Whether the line is closed"
+    IDS_CMDTIP_LINE         "LineString"
+    IDS_CMDTIP_CURVE        "Spline"
+    IDS_CMDTIP_ARC          "Arc"
+    IDS_CMDTIP_HIDE         "HideLine"
+    IDS_CMDTIP_SYNCH        "StreamLine"
+    IDS_CMDPLANE_LINETYPE   "Line Type"
+    IDS_CMDNAME_PLACECURVE  "Place Curve"
+    IDS_OUTPUT_CMDPROMPT    "Command"
+    IDS_FIELDNAME_GEOCLASS  "Geometry Class"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_COLOR     "Color"
+    IDS_FIELDNAME_CLSTYPE   "Object Class"
+    IDS_FIELDNAME_DELETED   "Delete"
+    IDS_FIELDNAME_ID        "ID"
+    IDS_FIELDNAME_POINTANGLE "Angle"
+    IDS_FIELDNAME_CURVECLOSED "Closed"
+    IDS_FIELDNAME_TEXT_CONTENT "Content"
+    IDS_FIELDNAME_TEXT_FONT "Font"
+    IDS_FIELDNAME_TEXT_CHARWIDTHS "Char Width Ratio"
+    IDS_FIELDNAME_TEXT_CHARHEIGHT "Char Height"
+    IDS_FIELDNAME_TEXT_ALIGNTYPE "Alignment"
+    IDS_FIELDNAME_TEXT_INCLINE "Incline Mode"
+    IDS_FIELDNAME_TEXT_INCLINEANGLE "Incline Angle"
+    IDS_FIELDNAME_TEXT_PLACETYPE "Layout Mode"
+    IDS_FIELDNAME_TEXT_CHARINTVS "Char Space Ratio"
+    IDS_FIELDNAME_TEXT_LINEINTVS "Line Space Ratio"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_SHAPE     "Graphics"
+    IDS_CMDPLANE_RECTIFY    "Rectified"
+    IDS_CMDNAME_PLACEPARAL  "Place Parallel"
+    IDS_DEFFONT             "Arial"
+    IDS_EDITVERTEX_PT       "Edit Vertex:"
+    IDS_CMDTIP_VERTEXINFO   "Key Point: Index %d, Coordinates %.4f, %.4f, %.4f"
+    IDS_CMDTIP_CTRLPTINFO   "Control Point:  Coordinates %.4f, %.4f, %.4f \n"
+    IDS_CMDPLANE_OPENIFSNAP "Not Closed If End Points Get Snapped"
+    IDS_CMDPLANE_TOLERANCE  "Tolerance"
+    IDS_CMDPLANE_AUTOCLOSETOLER "Auto Closing Tolerance"
+    IDS_CMDPLANE_POSTSMOOTH "Post Smooth"
+    IDS_CMDPLANE_FASTCURVE  "Fast Display For Curves"
+    IDS_YES                 "Yes"
+    IDS_NO                  "No"
+    IDS_OUTPUT_CANCEL       "Cancel"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CMDNAME_DELVERTEX   "Delete Vertex"
+    IDS_CMDTIP_CLICKOK      "Left button click on space place to affirm your select, or on another element to change your select, and Right button click to cancel command\n"
+    IDS_STRING_SELECT       "Start Select\n"
+    IDS_CMDPLANE_REFTOLER   "Tolerance Of Sharing Overlap"
+    IDS_CMDPLANE_REVERSE    "Reverse"
+    IDS_CMDTIP_3ARC         "Three Point Arc"
+    IDS_FIELDNAME_SYMBOLIZETEXT "Symbolize Text"
+    IDS_FIELDNAME_GEOSYMBOLNAME "Symbol Name"
+    IDS_FIELDNAME_FTRCODE   "Feature Code"
+    IDS_FIELDNAME_FTRVISIBLE "Visible"
+    IDS_CMDPLANE_TRACKLINE  "Track Line"
+    IDS_FIELDNAME_GEOCURVE_DHEIGHT "Relative Height"
+    IDS_FIELDNAME_FTRPURPOSE "Usage"
+    IDS_FIELDNAME_GEOKX     "X Scale"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_GEOKY     "Y Scale"
+    IDS_FIELDNAME_GEOROTATEANG "Rotation Angle"
+    IDS_FIELDNAME_GEOCOVERTYPE "Cover Type"
+    IDS_FIELDNAME_GEOLINETYPESCALE "Linetype Scale"
+    IDS_FIELDNAME_GEOLINEWIDTHSCALE "Line Width Scale"
+    IDS_FIELDNAME_GEOCELLSCALE "Cell Scale"
+    IDS_FIELDNAME_GEOCELLANGLE "Cell Angle"
+    IDS_FIELDNAME_GEOINTVSCALE "Space Scale"
+    IDS_FIELDNAME_GEOXSTARTOFF "X Offset"
+    IDS_FIELDNAME_GEOWIDTH  "Line Width"
+    IDS_FIELDNAME_GEOEXTENDDIS "Cover Extension"
+    IDS_CMDNAME_MOVE        "Move"
+    IDS_FIELDNAME_DISPLAYORDER "Display Order"
+    IDS_FIELDNAME_GROUPID   "Group ID"
+    IDS_CMDTIP_NODEWID      "Vertex Width"
+    IDS_FIELDNAME_GEOYSTARTOFF "Y Offset"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FIELDNAME_TEXTANGLE "Text Angle"
+    IDS_FIELDNAME_CHARANGLE "Character Angle"
+    IDS_FIELDNAME_LENGTH    "Length"
+    IDS_FIELDNAME_ANGLE     "Angle"
+    IDS_CMDNAME_INSERTVERTEX "Insert a Vertex"
+    IDS_CMDNAME_EDITVERTEX  "Modify a Vertex"
+    IDS_FIELDNAME_LINETYPEXOFF "Linetype X Offset"
+    IDS_FIELDNAME_SYMBOLIZEFLAG "Symbol Flags"
+    IDS_FIELDNAME_CREATETIME "Create Time"
+    IDS_FIELDNAME_MODIFYTIME "Modification Time"
+    IDS_CMDTIP_DISFAR       "The current point is beyond the error limit, please relocate it!"
+    IDS_CMDPLANE_MULPTBUILDPT "Use Multiple Points"
+    IDS_CMDPLANE_BUILDPTTOLERANCE "Error Limit"
+    IDS_FIELDNAME_TEXT_OTHERFLAG "Other Flags"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_UVS_DISCONNECT      "UVS Is DisConnect, Please save and  contact administrator"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

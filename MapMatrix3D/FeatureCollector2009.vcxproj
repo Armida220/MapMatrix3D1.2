@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>FeatureCollector2009</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{30B2A634-8383-4CEF-B27C-7CFEB68223F4}</ProjectGuid>
+    <ProjectName>MapMatrix3D</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin_MapMatrix3D\</OutDir>
+    <IncludePath>D:\Program Files (x86)\ArcGIS\Desktop10.3\com;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.\;res;..\core\viewer\include;..\core\viewer\TileImage;..\core\Map;..\core\viewer\SmartView;..\core\viewer\EditBase;..\core\CadLib\include;..\core\VirtualDriver\VirtualDriver;..\core\SQLite\include;..\BigOrtho\BigOrtho;UIExtension;LayersMgr;..\core\viewer\com_gdal\gdal\gcore\;..\core\viewer\com_gdal\gdal\ogr\;..\core\viewer\com_gdal\gdal\port\;../mm3dDll/mm3dViewer;../mm3dPrj;../../3rdParty/cef;..\mm3dDll\mm3dModule;../../3rdParty/json/include;../../3rdParty/gdal/include;../../3rdParty/featureOne/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_ENCODE_UNICODE;_LICENSE;_LICMAIN;_NOT_USE_DPWPACK;GLOG_NO_ABBREVIATED_SEVERITIES;GOOGLE_GLOG_DLL_DECL=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\FeatureCollector2009.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\../../bin\FeatureCollector2009.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalLibraryDirectories>../../3rdParty/featureOne/lib;../../3rdParty/cef/lib;../../3rdParty/json/lib;../../3rdParty/checkDongleLicense/lib;../../lib_MapMatrix3D;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SmartView.lib;EditBase.lib;cadlib.lib;virtualdriver.lib;libtiff.lib;BigOrtho.lib;map.lib;Cppsqlite.lib;Rpcrt4.lib;gdal_i.lib;mm3dViewer.lib;glu32.lib;opengl32.lib;glew32.lib;libcef.lib;libcef_dll_wrapper.lib;jsoncpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\bin_MapMatrix3D\MapMatrix3D.exe</OutputFile>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(OutDir)$(TargetFileName) $(OutDir)..\package\ /Y</Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.\;res;..\core\viewer\include;..\CORE\Viewer\TileImage;..\core\Map;..\core\viewer\SmartView;..\core\viewer\EditBase;..\core\CadLib\include;UIExtension;LayersMgr;..\core\VirtualDriver\VirtualDriver;..\BigOrthoCom\include;..\core\SQLite\include;..\cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_ENCODE_UNICODE;_LICENSE;_LICMAIN;_NOT_USE_DPWPACK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\FeatureCollector2009.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\../../bin\FeatureCollector2009.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../../bin\FeatureCollector2009.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>../../bin/FeatureOne.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SmartView.lib;EditBase.lib;cadlib.lib;virtualdriver.lib;libtiff.lib;BigOrtho.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AccuBox.cpp" />
+    <ClCompile Include="AccuDlg.cpp" />
+    <ClCompile Include="ArcgisMdbCodeTab.cpp" />
+    <ClCompile Include="Association.cpp" />
+    <ClCompile Include="AtomListCtrl.cpp" />
+    <ClCompile Include="BaseView.cpp" />
+    <ClCompile Include="CheckExProp.cpp" />
+    <ClCompile Include="CheckResultViewBar.cpp" />
+    <ClCompile Include="CheckScheme.cpp" />
+    <ClCompile Include="CheckSchemeViewBar.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ChkCmd.cpp" />
+    <ClCompile Include="ClassTreeWnd.cpp" />
+    <ClCompile Include="CMyChiLetter.cpp" />
+    <ClCompile Include="CollectionTreeCtrl.cpp" />
+    <ClCompile Include="CollectionViewBar.cpp" />
+    <ClCompile Include="ColorCombobox.cpp" />
+    <ClCompile Include="ColorDialogEX.cpp" />
+    <ClCompile Include="ColoredListCtrl.cpp" />
+    <ClCompile Include="CombinDlg.cpp" />
+    <ClCompile Include="ComboListCtrl.cpp" />
+    <ClCompile Include="CommandLidar.cpp" />
+    <ClCompile Include="CommonCallStation.cpp" />
+    <ClCompile Include="ConditionSelect.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="ConvertCoords.cpp" />
+    <ClCompile Include="CustomizeKey.cpp" />
+    <ClCompile Include="DeleteCommonSideDlg.cpp" />
+    <ClCompile Include="DlgAddMapsheet.cpp" />
+    <ClCompile Include="DlgAngbisectorSetting.cpp" />
+    <ClCompile Include="DlgAnnotationSetting.cpp" />
+    <ClCompile Include="DlgAnnoTip.cpp" />
+    <ClCompile Include="DlgBatExportMaps.cpp" />
+    <ClCompile Include="DlgBuildDEM.cpp" />
+    <ClCompile Include="DlgCellDefCopy.cpp" />
+    <ClCompile Include="DlgCellDefLinetypeView.cpp" />
+    <ClCompile Include="DlgCelldefView.cpp" />
+    <ClCompile Include="DlgCellHatchSetting.cpp" />
+    <ClCompile Include="DlgCellLineSetting.cpp" />
+    <ClCompile Include="DlgCellOverlayGrid.cpp" />
+    <ClCompile Include="DlgCellSetting.cpp" />
+    <ClCompile Include="DlgChangeFCode.cpp" />
+    <ClCompile Include="DlgCheckList.cpp" />
+    <ClCompile Include="DlgCheckSuspendPoints.cpp" />
+    <ClCompile Include="dlgchkconfig.cpp" />
+    <ClCompile Include="DlgChkPtsList.cpp" />
+    <ClCompile Include="DlgChooseMP.cpp" />
+    <ClCompile Include="DlgClearLineType.cpp" />
+    <ClCompile Include="DlgColorHatchSetting.cpp" />
+    <ClCompile Include="DlgColorLayout.cpp" />
+    <ClCompile Include="DlgColors.cpp" />
+    <ClCompile Include="DlgCommand.cpp" />
+    <ClCompile Include="DlgCommand2.cpp" />
+    <ClCompile Include="DlgCommand_Part1.cpp" />
+    <ClCompile Include="DlgCommand_Part2.cpp" />
+    <ClCompile Include="DlgCommand_Part3.cpp" />
+    <ClCompile Include="DlgConditionColorHatch.cpp" />
+    <ClCompile Include="DlgConditionSelect.cpp" />
+    <ClCompile Include="DlgConditionSelectConfig.cpp" />
+    <ClCompile Include="DlgConditionSelectProp.cpp" />
+    <ClCompile Include="DlgConnectDB.cpp" />
+    <ClCompile Include="DlgConvertByPts.cpp" />
+    <ClCompile Include="DlgConvertCoordSys.cpp" />
+    <ClCompile Include="DlgConvertPhoto.cpp" />
+    <ClCompile Include="DlgCreateContours.cpp" />
+    <ClCompile Include="DlgCreateContours1.cpp" />
+    <ClCompile Include="DlgCulvertSurfaceSetting.cpp" />
+    <ClCompile Include="DlgDashLineSetting.cpp" />
+    <ClCompile Include="DlgDataSource.cpp" />
+    <ClCompile Include="DlgDataTransform.cpp" />
+    <ClCompile Include="DlgDeleteSame.cpp" />
+    <ClCompile Include="DlgDetectResult.cpp" />
+    <ClCompile Include="DlgDiagonalSetting.cpp" />
+    <ClCompile Include="DlgDisplayContoursSpecially.cpp" />
+    <ClCompile Include="DlgEditText.cpp" />
+    <ClCompile Include="DlgExportArcgisMdb.cpp" />
+    <ClCompile Include="DlgExportASC.cpp" />
+    <ClCompile Include="DlgExportCas.cpp" />
+    <ClCompile Include="DlgExportCodeTable.cpp" />
+    <ClCompile Include="DlgExportCodeTabTemp.cpp" />
+    <ClCompile Include="dlgexportdgn.cpp" />
+    <ClCompile Include="DlgExportDxf.cpp" />
+    <ClCompile Include="DlgExportE00.cpp" />
+    <ClCompile Include="DlgExportEps.cpp" />
+    <ClCompile Include="DlgExportFdb.cpp" />
+    <ClCompile Include="DlgExportJB.cpp" />
+    <ClCompile Include="DlgExportMapStarText.cpp" />
+    <ClCompile Include="DlgExportModel.cpp" />
+    <ClCompile Include="DlgExportRaster.cpp" />
+    <ClCompile Include="DlgExportRaterStereo.cpp" />
+    <ClCompile Include="DlgExportShp.cpp" />
+    <ClCompile Include="DlgExtProperties.cpp" />
+    <ClCompile Include="DlgFilterSelect.cpp" />
+    <ClCompile Include="DlgImportCodeTable.cpp" />
+    <ClCompile Include="DlgImportCtrlPts.cpp" />
+    <ClCompile Include="DlgImportDGN.cpp" />
+    <ClCompile Include="DlgImportDxf.cpp" />
+    <ClCompile Include="DlgImportE00.cpp" />
+    <ClCompile Include="DlgImportEps.cpp" />
+    <ClCompile Include="DlgImportFdb.cpp" />
+    <ClCompile Include="DlgImportJB.cpp" />
+    <ClCompile Include="DlgImportMDB.cpp" />
+    <ClCompile Include="DlgImportShp.cpp" />
+    <ClCompile Include="DlgImportVVT.cpp" />
+    <ClCompile Include="DlgImportXYZ.cpp" />
+    <ClCompile Include="DlgInputCode.cpp" />
+    <ClCompile Include="DlgInputCommand.cpp" />
+    <ClCompile Include="DlgInputData.cpp" />
+    <ClCompile Include="DlgInputName.cpp" />
+    <ClCompile Include="dlginputstr.cpp" />
+    <ClCompile Include="DlgLayerCodeCheck.cpp" />
+    <ClCompile Include="DlgLinefillSetting.cpp" />
+    <ClCompile Include="DlgMakeCheckPtSample.cpp" />
+    <ClCompile Include="DlgMakeCheckPtSampleBatch.cpp" />
+    <ClCompile Include="DlgMapInfo.cpp" />
+    <ClCompile Include="DlgMarkIconsSetting.cpp" />
+    <ClCompile Include="DlgMessageBox.cpp" />
+    <ClCompile Include="DlgMetaInput.cpp" />
+    <ClCompile Include="DlgNewGroup.cpp" />
+    <ClCompile Include="DlgNewLayer.cpp" />
+    <ClCompile Include="DlgNewLinetype.cpp" />
+    <ClCompile Include="DlgNextLast.cpp" />
+    <ClCompile Include="DlgOpSettings.cpp" />
+    <ClCompile Include="DlgOverlayBound.cpp" />
+    <ClCompile Include="DlgOverlayGrid.cpp" />
+    <ClCompile Include="DlgOverlayOrtho.cpp" />
+    <ClCompile Include="DlgOverMutiImgLay.cpp" />
+    <ClCompile Include="DlgParalineSetting.cpp" />
+    <ClCompile Include="DlgPluginsManage.cpp" />
+    <ClCompile Include="DlgPrintOption.cpp" />
+    <ClCompile Include="dlgProcSymLTSetting.cpp" />
+    <ClCompile Include="DlgRefDataBound.cpp" />
+    <ClCompile Include="DlgRefDataFile.cpp" />
+    <ClCompile Include="DlgReorientation.cpp" />
+    <ClCompile Include="DlgRepairPTZText.cpp" />
+    <ClCompile Include="DlgScale.cpp" />
+    <ClCompile Include="DlgScaleArcSetting.cpp" />
+    <ClCompile Include="DlgScaleCellLineSetting.cpp" />
+    <ClCompile Include="DlgScaleCellSetting.cpp" />
+    <ClCompile Include="dlgscaleChuanSongDaisetting.cpp" />
+    <ClCompile Include="dlgscalecranesetting.cpp" />
+    <ClCompile Include="dlgscalefunnelsetting.cpp" />
+    <ClCompile Include="DlgScaleLineSetting.cpp" />
+    <ClCompile Include="DlgScaleOldDouyaSettings.cpp" />
+    <ClCompile Include="dlgscaleturnplatesetting.cpp" />
+    <ClCompile Include="DlgScaleXiepo.cpp" />
+    <ClCompile Include="DlgScheme.cpp" />
+    <ClCompile Include="DlgSchemeConvert.cpp" />
+    <ClCompile Include="DlgSchemerAttr.cpp" />
+    <ClCompile Include="DlgSearchCheckPt.cpp" />
+    <ClCompile Include="DlgSearchCodeDlg.cpp" />
+    <ClCompile Include="DlgSearchResult.cpp" />
+    <ClCompile Include="DlgSelectLayer.cpp" />
+    <ClCompile Include="DlgSelectPairPhoto.cpp" />
+    <ClCompile Include="DlgSelectShift.cpp" />
+    <ClCompile Include="DlgSetColor.cpp" />
+    <ClCompile Include="DlgSetHeiStep.cpp" />
+    <ClCompile Include="DlgSetSpecialSymbol.cpp" />
+    <ClCompile Include="dlgsetupgroup.cpp" />
+    <ClCompile Include="DlgSetXYZ.cpp" />
+    <ClCompile Include="DlgStretchImg.cpp" />
+    <ClCompile Include="DlgSupportGeoClassName.cpp" />
+    <ClCompile Include="DlgSymbolizeFlag.cpp" />
+    <ClCompile Include="DlgSymbolTable.cpp" />
+    <ClCompile Include="DlgTestContourSettings.cpp" />
+    <ClCompile Include="DlgTidalWaterSetting.cpp" />
+    <ClCompile Include="DlgTip.cpp" />
+    <ClCompile Include="DlgTrialMsg.cpp" />
+    <ClCompile Include="DlgUsedFonts.cpp" />
+    <ClCompile Include="DlgWheelSpeed.cpp" />
+    <ClCompile Include="DlgWorkSpaceBound.cpp" />
+    <ClCompile Include="DrawGraphStatic.cpp" />
+    <ClCompile Include="DxfAccess.cpp" />
+    <ClCompile Include="DxfConvert.cpp" />
+    <ClCompile Include="E00\e00IO.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EditBase.cpp" />
+    <ClCompile Include="editbasedoc.cpp" />
+    <ClCompile Include="EpsAccess.cpp" />
+    <ClCompile Include="Export\dbfopen.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Export\JBFormatData.cpp" />
+    <ClCompile Include="Export\MapStarText.cpp" />
+    <ClCompile Include="Export\MilitaryVectorFile.cpp" />
+    <ClCompile Include="Export\shpopen.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FTRLayerViewBar.cpp" />
+    <ClCompile Include="FullScreenAssist.cpp" />
+    <ClCompile Include="GeometryViewBar.cpp" />
+    <ClCompile Include="GeoSurfaceBooleanHandle.cpp" />
+    <ClCompile Include="GFindWindows.cpp" />
+    <ClCompile Include="Global\GeoBuilderContour.cpp" />
+    <ClCompile Include="Global\GridContourX.cpp" />
+    <ClCompile Include="Global\InterpolateContour.cpp" />
+    <ClCompile Include="GridCtrl_src\GridCell.cpp" />
+    <ClCompile Include="GridCtrl_src\GridCellBase.cpp" />
+    <ClCompile Include="GridCtrl_src\GridCtrl.cpp" />
+    <ClCompile Include="GridCtrl_src\GridDropTarget.cpp" />
+    <ClCompile Include="GridCtrl_src\InPEdit.cpp" />
+    <ClCompile Include="GridCtrl_src\TitleTip.cpp" />
+    <ClCompile Include="InPlaceCombo.cpp" />
+    <ClCompile Include="InPlaceEdit.cpp" />
+    <ClCompile Include="LayersMgr\dlglayervisible.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="LayersMgr\dlgxattributes.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="LayersMgr\FtrsMgrDlg.cpp" />
+    <ClCompile Include="LayersMgr\LayersMgrDlg.cpp" />
+    <ClCompile Include="LayersMgr\LVLColorButton.cpp" />
+    <ClCompile Include="LayersMgr\PropList.cpp" />
+    <ClCompile Include="LayersMgr\TreeCtrl.cpp" />
+    <ClCompile Include="ListFile.cpp" />
+    <ClCompile Include="LVLColorButton0.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MapDecorateDlg.cpp" />
+    <ClCompile Include="MapDecorator.cpp" />
+    <ClCompile Include="MarkVectLayer.cpp" />
+    <ClCompile Include="MergeTree.cpp" />
+    <ClCompile Include="mm3dPrj\AbsOriDlgHandler.cpp" />
+    <ClCompile Include="mm3dPrj\BufParser.cpp" />
+    <ClCompile Include="mm3dPrj\CursorFile.cpp" />
+    <ClCompile Include="mm3dPrj\CurveTypeHandler.cpp" />
+    <ClCompile Include="mm3dPrj\DatabaseOpsHandler.cpp" />
+    <ClCompile Include="mm3dPrj\DetectResultHandler.cpp" />
+    <ClCompile Include="mm3dPrj\DrawCircleHandler.cpp" />
+    <ClCompile Include="mm3dPrj\DrawLineHandler.cpp" />
+    <ClCompile Include="mm3dPrj\DrawPointHandler.cpp" />
+    <ClCompile Include="mm3dPrj\DrawSurfaceHandler.cpp" />
+    <ClCompile Include="mm3dPrj\EditBaseHandler.cpp" />
+    <ClCompile Include="mm3dPrj\EditContourHandler.cpp" />
+    <ClCompile Include="mm3dPrj\EditVectorHandler.cpp" />
+    <ClCompile Include="mm3dPrj\myAbsOriDlg.cpp" />
+    <ClCompile Include="mm3dPrj\FtrParser.cpp" />
+    <ClCompile Include="mm3dPrj\GeomParser.cpp" />
+    <ClCompile Include="mm3dPrj\Mm3dHandler.cpp" />
+    <ClCompile Include="mm3dPrj\MsgSender.cpp" />
+    <ClCompile Include="mm3dPrj\DuiToolbar.cpp" />
+    <ClCompile Include="mm3dPrj\MyCodeEdit.cpp" />
+    <ClCompile Include="mm3dPrj\MyDefineDockTabPane.cpp" />
+    <ClCompile Include="mm3dPrj\MyEditTip.cpp" />
+    <ClCompile Include="mm3dPrj\MyListBox.cpp" />
+    <ClCompile Include="mm3dPrj\MyListCtrl.cpp" />
+    <ClCompile Include="mm3dPrj\MyMFCButton.cpp" />
+    <ClCompile Include="mm3dPrj\MyTreeCtrl.cpp" />
+    <ClCompile Include="mm3dPrj\OsgbDoc.cpp" />
+    <ClCompile Include="mm3dPrj\OsgbVecView.cpp" />
+    <ClCompile Include="mm3dPrj\OsgbView.cpp" />
+    <ClCompile Include="mm3dPrj\OsgCoordCenter.cpp" />
+    <ClCompile Include="mm3dPrj\OverrideCutPartCmd.cpp" />
+    <ClCompile Include="mm3dPrj\OverrideEditVertCmd.cpp" />
+    <ClCompile Include="mm3dPrj\OverrideInsertVertCmd.cpp" />
+    <ClCompile Include="mm3dPrj\OverrideReplaceLineCmd.cpp" />
+    <ClCompile Include="mm3dPrj\OverridMatchVertCmd.cpp" />
+    <ClCompile Include="mm3dPrj\OverridTrimContourCmd.cpp" />
+    <ClCompile Include="mm3dPrj\DuiTreeView.cpp" />
+    <ClCompile Include="mm3dPrj\PickPixelControl.cpp" />
+    <ClCompile Include="mm3dPrj\PickPixelVirtualControl.cpp" />
+    <ClCompile Include="mm3dPrj\qcomm.cpp" />
+    <ClCompile Include="mm3dPrj\ShowImgDlg.cpp" />
+    <ClCompile Include="mm3dPrj\simple_app.cpp" />
+    <ClCompile Include="mm3dPrj\simple_handler.cpp" />
+    <ClCompile Include="mm3dPrj\simple_handler_context.cpp" />
+    <ClCompile Include="mm3dPrj\simple_handler_keyboard.cpp" />
+    <ClCompile Include="mm3dPrj\simple_handler_render.cpp" />
+    <ClCompile Include="mm3dPrj\simple_handler_win.cpp" />
+    <ClCompile Include="mm3dPrj\SplashWnd.cpp" />
+    <ClCompile Include="mm3dPrj\TitlebarHandler.cpp" />
+    <ClCompile Include="mm3dPrj\V8JsHandler.cpp" />
+    <ClCompile Include="mm3dPrj\VirtualWindow.cpp" />
+    <ClCompile Include="mm3dPrj\VirtualWindowResourceManager.cpp" />
+    <ClCompile Include="MruFile.cpp" />
+    <ClCompile Include="multiCombo.cpp" />
+    <ClCompile Include="MyPropList.cpp" />
+    <ClCompile Include="NewCellTypes\GridCellCombo.cpp" />
+    <ClCompile Include="OpSettingToolBar.cpp" />
+    <ClCompile Include="OptionsDlg.cpp" />
+    <ClCompile Include="OptionsPages.cpp" />
+    <ClCompile Include="Op_Page_Doc_Path.cpp" />
+    <ClCompile Include="Op_Page_QT1.cpp" />
+    <ClCompile Include="Op_Page_QT2.cpp" />
+    <ClCompile Include="Op_Page_QT3.cpp" />
+    <ClCompile Include="Ori.cpp" />
+    <ClCompile Include="OsgRealtimeVecLayer.cpp" />
+    <ClCompile Include="OutputViewBar.cpp" />
+    <ClCompile Include="mm3dPrj\OverrideRealtimeVectLayer.cpp" />
+    <ClCompile Include="OXToolTipCtrl.cpp" />
+    <ClCompile Include="PlugFunc.cpp" />
+    <ClCompile Include="PluginAccess.cpp" />
+    <ClCompile Include="PolygonBooleanHander.cpp" />
+    <ClCompile Include="PolygonWork.cpp" />
+    <ClCompile Include="ProjectViewBar.cpp" />
+    <ClCompile Include="PropertiesViewBar.cpp" />
+    <ClCompile Include="propertyfilebaseinfopage.cpp" />
+    <ClCompile Include="propertystatinfopage.cpp" />
+    <ClCompile Include="propertysummarypage.cpp" />
+    <ClCompile Include="propertyuserdefinepage.cpp" />
+    <ClCompile Include="PropList0.cpp" />
+    <ClCompile Include="QueryMenu.cpp" />
+    <ClCompile Include="RadioListBox.cpp" />
+    <ClCompile Include="RealtimeVectLayer.cpp" />
+    <ClCompile Include="RecentCmd.cpp" />
+    <ClCompile Include="SchemeMerge.cpp" />
+    <ClCompile Include="SchemePropertyCopy.cpp" />
+    <ClCompile Include="SilenceDDX.cpp" />
+    <ClCompile Include="SinglePhotoStereoView.cpp" />
+    <ClCompile Include="SM_DomDecryption.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="StereoFrame.cpp" />
+    <ClCompile Include="StereoParamFile.cpp" />
+    <ClCompile Include="StereoView.cpp" />
+    <ClCompile Include="TestVectorBar.cpp" />
+    <ClCompile Include="tin.cpp" />
+    <ClCompile Include="TINHandler.cpp" />
+    <ClCompile Include="triangle.cpp" />
+    <ClCompile Include="UIExtension\TreeCtrlEx.cpp" />
+    <ClCompile Include="UIExtension\UIFPropEx.cpp" />
+    <ClCompile Include="UIExtension\UIFPropListEx.cpp" />
+    <ClCompile Include="UIExtension\UserCustomToolbar.cpp" />
+    <ClCompile Include="UIFBoolProp.cpp" />
+    <ClCompile Include="UIFByLayerColorProp.cpp" />
+    <ClCompile Include="UIFFileDialogEx.cpp" />
+    <ClCompile Include="UIFLayerProp.cpp" />
+    <ClCompile Include="UIFPropListExPlus.cpp" />
+    <ClCompile Include="UIFStatusBarEx.cpp" />
+    <ClCompile Include="UIFToolbarComboBoxButtonEx.cpp" />
+    <ClCompile Include="UndoBar.cpp" />
+    <ClCompile Include="UndoListBox.cpp" />
+    <ClCompile Include="VectorView_EP.cpp" />
+    <ClCompile Include="VectorView_EX.cpp" />
+    <ClCompile Include="VectorView_GL.cpp" />
+    <ClCompile Include="VectorView_new.cpp" />
+    <ClCompile Include="ViewImgPosition.cpp" />
+    <ClCompile Include="VisualModelMapCtrl.cpp" />
+    <ClCompile Include="VVTAccess.cpp" />
+    <ClCompile Include="XFileDialog.cpp" />
+    <ClCompile Include="XmlAccess.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\FeatureCollector2009.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccuBox.h" />
+    <ClInclude Include="AccuDlg.h" />
+    <ClInclude Include="ArcgisMdbCodeTab.h" />
+    <ClInclude Include="Association.h" />
+    <ClInclude Include="AtomListCtrl.h" />
+    <ClInclude Include="BaseView.h" />
+    <ClInclude Include="CADSymFile.h" />
+    <ClInclude Include="CheckExProp.h" />
+    <ClInclude Include="CheckResultViewBar.h" />
+    <ClInclude Include="CheckScheme.h" />
+    <ClInclude Include="CheckSchemeViewBar.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ChkCmd.h" />
+    <ClInclude Include="ClassTreeWnd.h" />
+    <ClInclude Include="CMyChiLetter.h" />
+    <ClInclude Include="CollectionTreeCtrl.h" />
+    <ClInclude Include="CollectionViewBar.h" />
+    <ClInclude Include="ColorCombobox.h" />
+    <ClInclude Include="ColorDialogEX.h" />
+    <ClInclude Include="ColoredListCtrl.h" />
+    <ClInclude Include="CombinDlg.h" />
+    <ClInclude Include="ComboListCtrl.h" />
+    <ClInclude Include="CommandLidar.h" />
+    <ClInclude Include="CommonCallStation.h" />
+    <ClInclude Include="ConditionSelect.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="ConvertCoords.h" />
+    <ClInclude Include="CustomizeKey.h" />
+    <ClInclude Include="Delaunay.h" />
+    <ClInclude Include="DeleteCommonSideDlg.h" />
+    <ClInclude Include="DlgAddMapsheet.h" />
+    <ClInclude Include="DlgAngBisectorSetting.h" />
+    <ClInclude Include="DlgAnnotationSetting.h" />
+    <ClInclude Include="DlgAnnoTip.h" />
+    <ClInclude Include="DlgBatExportMaps.h" />
+    <ClInclude Include="DlgBuildDEM.h" />
+    <ClInclude Include="DlgCellDefCopy.h" />
+    <ClInclude Include="DlgCellDefLinetypeView.h" />
+    <ClInclude Include="DlgCelldefView.h" />
+    <ClInclude Include="DlgCellHatchSetting.h" />
+    <ClInclude Include="DlgCellLineSetting.h" />
+    <ClInclude Include="DlgCellOverlayGrid.h" />
+    <ClInclude Include="DlgCellSetting.h" />
+    <ClInclude Include="dlgchangefcode.h" />
+    <ClInclude Include="DlgCheckList.h" />
+    <ClInclude Include="DlgCheckSuspendPoints.h" />
+    <ClInclude Include="dlgchkconfig.h" />
+    <ClInclude Include="DlgChooseMP.h" />
+    <ClInclude Include="DlgColorHatchSetting.h" />
+    <ClInclude Include="DlgColorLayout.h" />
+    <ClInclude Include="DlgColors.h" />
+    <ClInclude Include="DlgCommand.h" />
+    <ClInclude Include="DlgCommand2.h" />
+    <ClInclude Include="DlgConditionColorHatch.h" />
+    <ClInclude Include="DlgConditionSelect.h" />
+    <ClInclude Include="DlgConditionSelectConfig.h" />
+    <ClInclude Include="DlgConditionSelectProp.h" />
+    <ClInclude Include="DlgConnectDB.h" />
+    <ClInclude Include="DlgConvertByPts.h" />
+    <ClInclude Include="DlgConvertCoordSys.h" />
+    <ClInclude Include="DlgConvertPhoto.h" />
+    <ClInclude Include="DlgCreateContours.h" />
+    <ClInclude Include="DlgCreateContours1.h" />
+    <ClInclude Include="DlgCulvertSurfaceSetting.h" />
+    <ClInclude Include="DlgDashLineSetting.h" />
+    <ClInclude Include="DlgDataSource.h" />
+    <ClInclude Include="DlgDataTransform.h" />
+    <ClInclude Include="DlgDeleteSame.h" />
+    <ClInclude Include="DlgDetectResult.h" />
+    <ClInclude Include="DlgDiagonalSetting.h" />
+    <ClInclude Include="DlgDisplayContoursSpecially.h" />
+    <ClInclude Include="DlgExportArcgisMdb.h" />
+    <ClInclude Include="DlgExportASC.h" />
+    <ClInclude Include="DlgExportCas.h" />
+    <ClInclude Include="DlgExportCodeTable.h" />
+    <ClInclude Include="DlgExportCodeTabTemp.h" />
+    <ClInclude Include="dlgexportdgn.h" />
+    <ClInclude Include="DlgExportDxf.h" />
+    <ClInclude Include="DlgExportE00.h" />
+    <ClInclude Include="DlgExportEps.h" />
+    <ClInclude Include="DlgExportFdb.h" />
+    <ClInclude Include="DlgExportJB.h" />
+    <ClInclude Include="DlgExportMapStarText.h" />
+    <ClInclude Include="DlgExportModel.h" />
+    <ClInclude Include="DlgExportRaster.h" />
+    <ClInclude Include="DlgExportRaterStereo.h" />
+    <ClInclude Include="DlgExportShp.h" />
+    <ClInclude Include="DlgExtProperties.h" />
+    <ClInclude Include="DlgFilterSelect.h" />
+    <ClInclude Include="DlgImportCodeTable.h" />
+    <ClInclude Include="DlgImportCtrlPts.h" />
+    <ClInclude Include="DlgImportDGN.h" />
+    <ClInclude Include="DlgImportDxf.h" />
+    <ClInclude Include="DlgImportE00.h" />
+    <ClInclude Include="DlgImportEps.h" />
+    <ClInclude Include="DlgImportFdb.h" />
+    <ClInclude Include="DlgImportJB.h" />
+    <ClInclude Include="DlgImportMDB.h" />
+    <ClInclude Include="DlgImportShp.h" />
+    <ClInclude Include="DlgImportVVT.h" />
+    <ClInclude Include="DlgImportXYZ.h" />
+    <ClInclude Include="dlginputcommand.h" />
+    <ClInclude Include="DlgInputData.h" />
+    <ClInclude Include="DlgInputName.h" />
+    <ClInclude Include="dlginputstr.h" />
+    <ClInclude Include="DlgLayerCodeCheck.h" />
+    <ClInclude Include="DlgLinefillSetting.h" />
+    <ClInclude Include="DlgMakeCheckPtSample.h" />
+    <ClInclude Include="DlgMakeCheckPtSampleBatch.h" />
+    <ClInclude Include="DlgMapInfo.h" />
+    <ClInclude Include="DlgMarkIconsSetting.h" />
+    <ClInclude Include="DlgMessageBox.h" />
+    <ClInclude Include="DlgMetaInput.h" />
+    <ClInclude Include="DlgNewGroup.h" />
+    <ClInclude Include="DlgNewLayer.h" />
+    <ClInclude Include="DlgNewLinetype.h" />
+    <ClInclude Include="DlgNextLast.h" />
+    <ClInclude Include="DlgOpSettings.h" />
+    <ClInclude Include="DlgOverlayBound.h" />
+    <ClInclude Include="DlgOverlayGrid.h" />
+    <ClInclude Include="DlgOverlayOrtho.h" />
+    <ClInclude Include="DlgOverMutiImgLay.h" />
+    <ClInclude Include="DlgParalineSetting.h" />
+    <ClInclude Include="DlgPluginsManage.h" />
+    <ClInclude Include="DlgPrintOption.h" />
+    <ClInclude Include="dlgProcSymLTSetting.h" />
+    <ClInclude Include="DlgRefDataFile.h" />
+    <ClInclude Include="DlgReorientation.h" />
+    <ClInclude Include="DlgRepairPTZText.h" />
+    <ClInclude Include="DlgScale.h" />
+    <ClInclude Include="DlgScaleArcSetting.h" />
+    <ClInclude Include="DlgScaleCellLineSetting.h" />
+    <ClInclude Include="DlgScaleCellSetting.h" />
+    <ClInclude Include="dlgscaleChuanSongDaisetting.h" />
+    <ClInclude Include="dlgscalecranesetting.h" />
+    <ClInclude Include="dlgscalefunnelsetting.h" />
+    <ClInclude Include="DlgScaleLineSetting.h" />
+    <ClInclude Include="DlgScaleOldDouyaSettings.h" />
+    <ClInclude Include="dlgscaleturnplatesetting.h" />
+    <ClInclude Include="DlgScaleXiepo.h" />
+    <ClInclude Include="DlgScheme.h" />
+    <ClInclude Include="DlgSchemeConvert.h" />
+    <ClInclude Include="DlgSchemerAttr.h" />
+    <ClInclude Include="DlgSearchCodeDlg.h" />
+    <ClInclude Include="DlgSearchResult.h" />
+    <ClInclude Include="DlgSelectLayer.h" />
+    <ClInclude Include="DlgSelectPairPhoto.h" />
+    <ClInclude Include="DlgSelectShift.h" />
+    <ClInclude Include="DlgSetColor.h" />
+    <ClInclude Include="DlgSetHeiStep.h" />
+    <ClInclude Include="DlgSetSpecialSymbol.h" />
+    <ClInclude Include="dlgsetupgroup.h" />
+    <ClInclude Include="DlgSetXYZ.h" />
+    <ClInclude Include="DlgStretchImg.h" />
+    <ClInclude Include="DlgSupportGeoClassName.h" />
+    <ClInclude Include="DlgSymbolizeFlag.h" />
+    <ClInclude Include="DlgSymbolTable.h" />
+    <ClInclude Include="DlgTestContourSettings.h" />
+    <ClInclude Include="DlgTip.h" />
+    <ClInclude Include="DlgUsedFonts.h" />
+    <ClInclude Include="DlgWheelSpeed.h" />
+    <ClInclude Include="DlgWorkSpaceBound.h" />
+    <ClInclude Include="DrawGraphStatic.h" />
+    <ClInclude Include="DxfAccess.h" />
+    <ClInclude Include="DxfConvert.h" />
+    <ClInclude Include="E00\e00IO.h" />
+    <ClInclude Include="EditBase.h" />
+    <ClInclude Include="editbasedoc.h" />
+    <ClInclude Include="EpsAccess.h" />
+    <ClInclude Include="Export\JBFormatData.h" />
+    <ClInclude Include="Export\MapStarText.h" />
+    <ClInclude Include="Export\MilitaryVectorFile.h" />
+    <ClInclude Include="FTRLayerViewBar.h" />
+    <ClInclude Include="FullScreenAssist.h" />
+    <ClInclude Include="GeometryViewBar.h" />
+    <ClInclude Include="GeoSurfaceBooleanHandle.h" />
+    <ClInclude Include="GFindWindows.h" />
+    <ClInclude Include="Global\EqualIn.h" />
+    <ClInclude Include="Global\GeoBuilderContour.h" />
+    <ClInclude Include="Global\GridContourX.h" />
+    <ClInclude Include="GridCtrl_src\CellRange.h" />
+    <ClInclude Include="GridCtrl_src\GridCell.h" />
+    <ClInclude Include="GridCtrl_src\GridCellBase.h" />
+    <ClInclude Include="GridCtrl_src\GridCtrl.h" />
+    <ClInclude Include="GridCtrl_src\GridDropTarget.h" />
+    <ClInclude Include="GridCtrl_src\InPEdit.h" />
+    <ClInclude Include="GridCtrl_src\MemDC.h" />
+    <ClInclude Include="GridCtrl_src\TitleTip.h" />
+    <ClInclude Include="InPlaceCombo.h" />
+    <ClInclude Include="InPlaceEdit.h" />
+    <ClInclude Include="IPolygonBoolean.h" />
+    <ClInclude Include="LayersMgr\dlglayervisible.h" />
+    <ClInclude Include="LayersMgr\dlgxattributes.h" />
+    <ClInclude Include="LayersMgr\FtrsMgrDlg.h" />
+    <ClInclude Include="LayersMgr\LayersMgrDlg.h" />
+    <ClInclude Include="LayersMgr\LVLColorButton.h" />
+    <ClInclude Include="LayersMgr\PropList.h" />
+    <ClInclude Include="LayersMgr\TreeCtrl.h" />
+    <ClInclude Include="ListFile.h" />
+    <ClInclude Include="LVLColorButton0.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MapDecorateDlg.h" />
+    <ClInclude Include="MapDecorator.h" />
+    <ClInclude Include="MarkVectLayer.h" />
+    <ClInclude Include="MergeTree.h" />
+    <ClInclude Include="mm3dPrj\AbsOriDlgHandler.h" />
+    <ClInclude Include="mm3dPrj\BufParser.h" />
+    <ClInclude Include="mm3dPrj\CursorFile.h" />
+    <ClInclude Include="mm3dPrj\CurveTypeHandler.h" />
+    <ClInclude Include="mm3dPrj\DatabaseOpsHandler.h" />
+    <ClInclude Include="mm3dPrj\DetectResultHandler.h" />
+    <ClInclude Include="mm3dPrj\DrawCircleHandler.h" />
+    <ClInclude Include="mm3dPrj\DrawLineHandler.h" />
+    <ClInclude Include="mm3dPrj\DrawPointHandler.h" />
+    <ClInclude Include="mm3dPrj\DrawSurfaceHandler.h" />
+    <ClInclude Include="mm3dPrj\EditBaseHandler.h" />
+    <ClInclude Include="mm3dPrj\EditContourHandler.h" />
+    <ClInclude Include="mm3dPrj\EditVectorHandler.h" />
+    <ClInclude Include="mm3dPrj\myAbsOriDlg.h" />
+    <ClInclude Include="mm3dPrj\FtrParser.h" />
+    <ClInclude Include="mm3dPrj\GeomParser.h" />
+    <ClInclude Include="mm3dPrj\Mm3dHandler.h" />
+    <ClInclude Include="mm3dPrj\MsgSender.h" />
+    <ClInclude Include="mm3dPrj\DuiToolbar.h" />
+    <ClInclude Include="mm3dPrj\MyCodeEdit.h" />
+    <ClInclude Include="mm3dPrj\MyDefineDockTabPane.h" />
+    <ClInclude Include="mm3dPrj\MyEditTip.h" />
+    <ClInclude Include="mm3dPrj\MyListBox.h" />
+    <ClInclude Include="mm3dPrj\MyListCtrl.h" />
+    <ClInclude Include="mm3dPrj\MyMFCButton.h" />
+    <ClInclude Include="mm3dPrj\MyTreeCtrl.h" />
+    <ClInclude Include="mm3dPrj\OsgbDoc.h" />
+    <ClInclude Include="mm3dPrj\OsgbVecView.h" />
+    <ClInclude Include="mm3dPrj\OsgbView.h" />
+    <ClInclude Include="mm3dPrj\OsgCoordCenter.h" />
+    <ClInclude Include="mm3dPrj\osgdef.h" />
+    <ClInclude Include="mm3dPrj\OverrideCutPartCmd.h" />
+    <ClInclude Include="mm3dPrj\OverrideEditVertCmd.h" />
+    <ClInclude Include="mm3dPrj\OverrideInsertVertCmd.h" />
+    <ClInclude Include="mm3dPrj\OverrideReplaceLineCmd.h" />
+    <ClInclude Include="mm3dPrj\OverridMatchVertCmd.h" />
+    <ClInclude Include="mm3dPrj\OverridTrimContourCmd.h" />
+    <ClInclude Include="mm3dPrj\DuiTreeView.h" />
+    <ClInclude Include="mm3dPrj\PickPixelControl.h" />
+    <ClInclude Include="mm3dPrj\PickPixelVirtualControl.h" />
+    <ClInclude Include="mm3dPrj\qcomm.h" />
+    <ClInclude Include="mm3dPrj\ShowImgDlg.h" />
+    <ClInclude Include="mm3dPrj\simple_app.h" />
+    <ClInclude Include="mm3dPrj\simple_handler.h" />
+    <ClInclude Include="mm3dPrj\SplashWnd.h" />
+    <ClInclude Include="mm3dPrj\TitlebarHandler.h" />
+    <ClInclude Include="mm3dPrj\V8JsHandler.h" />
+    <ClInclude Include="MruFile.h" />
+    <ClInclude Include="mm3dPrj\threadSafeQueueT.h" />
+    <ClInclude Include="mm3dPrj\VirtualWindow.h" />
+    <ClInclude Include="mm3dPrj\VirtualWindowResourceManager.h" />
+    <ClInclude Include="multicombo.h" />
+    <ClInclude Include="MyPropList.h" />
+    <ClInclude Include="MyStyleDockPaneDlg.h" />
+    <ClInclude Include="NewCellTypes\GridCellCombo.h" />
+    <ClInclude Include="OdaToolkit.h" />
+    <ClInclude Include="OdaX.h" />
+    <ClInclude Include="OpSettingToolBar.h" />
+    <ClInclude Include="OptionsDlg.h" />
+    <ClInclude Include="OptionsPages.h" />
+    <ClInclude Include="Op_Page_Doc_Path.h" />
+    <ClInclude Include="Op_Page_QT1.h" />
+    <ClInclude Include="Op_Page_QT2.h" />
+    <ClInclude Include="Op_Page_QT3.h" />
+    <ClInclude Include="Ori.h" />
+    <ClInclude Include="OsgRealtimeVecLayer.h" />
+    <ClInclude Include="OutputViewBar.h" />
+    <ClInclude Include="OverrideRealtimeVectLayer.h" />
+    <ClInclude Include="OXToolTipCtrl.h" />
+    <ClInclude Include="PlugFunc.h" />
+    <ClInclude Include="PluginAccess.h" />
+    <ClInclude Include="PolygonBoolean.h" />
+    <ClInclude Include="PolygonBooleanHander.h" />
+    <ClInclude Include="PolygonWork.h" />
+    <ClInclude Include="ProjectViewBar.h" />
+    <ClInclude Include="PropertiesViewBar.h" />
+    <ClInclude Include="propertyfilebaseinfopage.h" />
+    <ClInclude Include="propertystatinfopage.h" />
+    <ClInclude Include="propertysummarypage.h" />
+    <ClInclude Include="propertyuserdefinepage.h" />
+    <ClInclude Include="PropList0.h" />
+    <ClInclude Include="QueryMenu.h" />
+    <ClInclude Include="RadioListBox.h" />
+    <ClInclude Include="RealtimeVectLayer.h" />
+    <ClInclude Include="RecentCmd.h" />
+    <ClInclude Include="res\Resource.h" />
+    <ClInclude Include="SchemeMerge.h" />
+    <ClInclude Include="SchemePropertyCopy.h" />
+    <ClInclude Include="SilenceDDX.h" />
+    <ClInclude Include="SinglePhotoStereoView.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="StereoFrame.h" />
+    <ClInclude Include="StereoView.h" />
+    <ClInclude Include="sunwayFunction.h" />
+    <ClInclude Include="TestVectorBar.h" />
+    <ClInclude Include="TIN.h" />
+    <ClInclude Include="TINHandler.h" />
+    <ClInclude Include="triangle2.h" />
+    <ClInclude Include="Triangulation.h" />
+    <ClInclude Include="UIExtension\TreeCtrlEx.h" />
+    <ClInclude Include="UIExtension\UIFPropEx.h" />
+    <ClInclude Include="UIExtension\UIFPropListEx.h" />
+    <ClInclude Include="UIExtension\UserCustomToolbar.h" />
+    <ClInclude Include="UIFBoolProp.h" />
+    <ClInclude Include="UIFByLayerColorProp.h" />
+    <ClInclude Include="UIFFileDialogEx.h" />
+    <ClInclude Include="UIFLayerProp.h" />
+    <ClInclude Include="UIFPropListExPlus.h" />
+    <ClInclude Include="UIFStatusBarEx.h" />
+    <ClInclude Include="UIFToolbarComboBoxButtonEx.h" />
+    <ClInclude Include="UndoBar.h" />
+    <ClInclude Include="UndoListBox.h" />
+    <ClInclude Include="vector2d.h" />
+    <ClInclude Include="VectorView_EP.h" />
+    <ClInclude Include="VectorView_EX.h" />
+    <ClInclude Include="VectorView_GL.h" />
+    <ClInclude Include="VectorView_new.h" />
+    <ClInclude Include="VisualModelMapCtrl.h" />
+    <ClInclude Include="VVTAccess.h" />
+    <ClInclude Include="XFileDialog.h" />
+    <ClInclude Include="XmlAccess.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FeatureCollector2009.rgs" />
+    <CustomBuild Include="res\FeatureCollector2009.rc2" />
+    <CustomBuild Include="res\res\001.bmp" />
+    <CustomBuild Include="res\res\002.bmp" />
+    <CustomBuild Include="res\res\advancededit.bmp" />
+    <CustomBuild Include="res\res\annotati.bmp" />
+    <CustomBuild Include="res\res\arrow.bmp" />
+    <CustomBuild Include="res\res\BarDlg.bmp" />
+    <CustomBuild Include="res\res\BarProject.bmp" />
+    <CustomBuild Include="res\res\bitmap1.bmp" />
+    <CustomBuild Include="res\res\bitmap2.bmp" />
+    <CustomBuild Include="res\res\bitmap3.bmp" />
+    <CustomBuild Include="res\res\bitmap_a.bmp" />
+    <CustomBuild Include="res\res\bitmap_e.bmp" />
+    <CustomBuild Include="res\res\bmp00001.bmp" />
+    <CustomBuild Include="res\res\bmp00002.bmp" />
+    <CustomBuild Include="res\res\bmp00003.bmp" />
+    <CustomBuild Include="res\res\bmp00004.bmp" />
+    <CustomBuild Include="res\res\bmp00005.bmp" />
+    <CustomBuild Include="res\res\bmp00006.bmp" />
+    <CustomBuild Include="res\res\bmp00007.bmp" />
+    <CustomBuild Include="res\res\bmp00008.bmp" />
+    <CustomBuild Include="res\res\BtnAutoMode.bmp" />
+    <CustomBuild Include="res\res\BtnFullScreen.bmp" />
+    <CustomBuild Include="res\res\BtnHeiLock.bmp" />
+    <CustomBuild Include="res\res\BtnHeiMode.bmp" />
+    <CustomBuild Include="res\res\BtnShareCross.bmp" />
+    <CustomBuild Include="res\res\BtnViewOverlay.bmp" />
+    <CustomBuild Include="res\res\button_m.bmp" />
+    <CustomBuild Include="res\res\button_r.bmp" />
+    <CustomBuild Include="res\res\cellhatc.bmp" />
+    <CustomBuild Include="res\res\cellline.bmp" />
+    <CustomBuild Include="res\res\cellscale.bmp" />
+    <CustomBuild Include="res\res\chk_mark.bmp" />
+    <CustomBuild Include="res\res\classview.bmp" />
+    <CustomBuild Include="res\res\class_view.ico" />
+    <CustomBuild Include="res\res\colorhat.bmp" />
+    <CustomBuild Include="res\res\cursor1.cur" />
+    <CustomBuild Include="res\res\cursor2.cur" />
+    <CustomBuild Include="res\res\diagonal.bmp" />
+    <CustomBuild Include="res\res\drawcircle.bmp" />
+    <CustomBuild Include="res\res\drawline.bmp" />
+    <CustomBuild Include="res\res\drawpoin.bmp" />
+    <CustomBuild Include="res\res\drawsurf.bmp" />
+    <CustomBuild Include="res\res\edit.bmp" />
+    <CustomBuild Include="res\res\EditBase.ico" />
+    <CustomBuild Include="res\res\EditBaseDoc.ico" />
+    <CustomBuild Include="res\res\edit_bas.bmp" />
+    <CustomBuild Include="res\res\edit_con.bmp" />
+    <CustomBuild Include="res\res\edit_lid.bmp" />
+    <CustomBuild Include="res\res\edit_tes.bmp" />
+    <CustomBuild Include="res\res\edit_vec.bmp" />
+    <CustomBuild Include="res\res\FeatureCollector.ico" />
+    <CustomBuild Include="res\res\FeatureCollector2009.ico" />
+    <CustomBuild Include="res\res\FeatureCollector2009Doc.ico" />
+    <CustomBuild Include="res\res\ftratt.bmp" />
+    <CustomBuild Include="res\res\hand-pro.cur" />
+    <CustomBuild Include="res\res\Hand.cur" />
+    <CustomBuild Include="res\res\ico00001.ico" />
+    <CustomBuild Include="res\res\ico00002.ico" />
+    <CustomBuild Include="res\res\icon1.ico" />
+    <CustomBuild Include="res\res\lampoff.bmp" />
+    <CustomBuild Include="res\res\lampon.bmp" />
+    <CustomBuild Include="res\res\layer.bmp" />
+    <CustomBuild Include="res\res\linefill.bmp" />
+    <CustomBuild Include="res\res\lockoff.bmp" />
+    <CustomBuild Include="res\res\lockon.bmp" />
+    <CustomBuild Include="res\res\mainfram.bmp" />
+    <CustomBuild Include="res\res\optionsimages.bmp" />
+    <CustomBuild Include="res\res\properti.bmp" />
+    <CustomBuild Include="res\res\properti.ico" />
+    <CustomBuild Include="res\res\property.bmp" />
+    <CustomBuild Include="res\res\res_view.ico" />
+    <CustomBuild Include="res\res\SelSpecialNode.bmp" />
+    <CustomBuild Include="res\res\tempicon.ico" />
+    <CustomBuild Include="res\res\Toolbar.bmp" />
+    <CustomBuild Include="res\res\toolbar1.bmp" />
+    <CustomBuild Include="res\res\toolbarf.bmp" />
+    <CustomBuild Include="res\res\toolbar_.bmp" />
+    <CustomBuild Include="res\res\toolftr.bmp" />
+    <CustomBuild Include="res\res\tools_page1.bmp" />
+    <CustomBuild Include="res\res\tree.bmp" />
+    <CustomBuild Include="res\res\UnSelSpecialNode.bmp" />
+    <CustomBuild Include="res\res\view.bmp" />
+    <CustomBuild Include="res\res\visibili.bmp" />
+    <CustomBuild Include="res\res\visibili1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="CheckDongleLicenseFile.lib" />
+    <Library Include="Cryptst.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\quit.bmp" />
+    <Image Include="res\res\bitmap4.bmp" />
+    <Image Include="res\res\bmp00009.bmp" />
+    <Image Include="res\res\bmp00010.bmp" />
+    <Image Include="res\res\bmp00011.bmp" />
+    <Image Include="res\res\bmp00012.bmp" />
+    <Image Include="res\res\bmp00013.bmp" />
+    <Image Include="res\res\quit.bmp" />
+    <Image Include="res\res\加载.bmp" />
+    <Image Include="res\加载.bmp" />
+    <Image Include="res\res\toolbar2.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="res\FeatureCollector2009.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

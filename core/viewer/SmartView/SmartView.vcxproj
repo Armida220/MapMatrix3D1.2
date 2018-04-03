@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>/PD/PROJECTS/GeoBuilder/WA/Source/src/CORE/Viewer/SmartView?PVCS Version Manager?P:\VTCMLIB?</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{3374E195-8A62-4E4E-BD49-F1275727D26A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\..\bin\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\..\bin_MapMatrix3D</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\..\..\bin\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\;res;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;EXPORT_SMARTVIEW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\SmartView.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\..\..\bin\SmartView.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\..\bin\SmartView.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\..\..\..\bin\SmartView.dll</OutputFile>
+      <ImportLibrary>
+      </ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\..\bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iseeirw.lib;glu32.lib;opengl32.lib;iseeio.lib;glew32.lib;d3d9.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\;res;..\include;..\..\..\..\3rdParty\featureOne\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;EXPORT_SMARTVIEW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\SmartView.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\..\..\bin\SmartView.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>..\..\..\..\lib_MapMatrix3D\SmartView.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\..\3rdParty\featureOne\lib;..\..\..\..\lib_MapMatrix3D;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iseeirw.lib;glu32.lib;opengl32.lib;iseeio.lib;glew32.lib;d3d9.lib;d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\bin_MapMatrix3D\SmartView.dll</OutputFile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>xcopy $(OutDir)$(TargetFileName) $(OutDir)..\package\ /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>.\;.\res\;..\include;..\..\UI\UIFCBPro;.\View;..\..\..\..\FeatureCollector2007;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_AFXEXT;EXPORT_SMARTVIEW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\SmartView.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\..\..\bin\SmartView.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\..\bin\SmartView.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\..\..\..\..\bin\SmartView.dll</OutputFile>
+      <ImportLibrary>.\..\..\..\..\bin\SmartView.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\..\bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iseeirw.lib;glu32.lib;opengl32.lib;iseeio.lib;ijl15.lib;UIFD.lib;glew32.lib;gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.\;.\res\;..\include;..\..\UI\UIFCBPro;.\View;..\..\..\..\FeatureCollector2007;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_AFXEXT;EXPORT_SMARTVIEW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\SmartView.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\..\..\bin\SmartView.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\..\bin\SmartView.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\..\..\..\..\bin\SmartView.dll</OutputFile>
+      <ImportLibrary>.\..\..\..\..\bin\SmartView.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\..\bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>iseeirw.lib;glu32.lib;opengl32.lib;iseeio.lib;ijl15.lib;UIFD.lib;glew32.lib;gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="res\res\bmp00001.bmp" />
+    <Image Include="res\res\BtnAdjust.bmp" />
+    <Image Include="res\res\BtnCursor.bmp" />
+    <Image Include="res\res\BtnHand.bmp" />
+    <Image Include="res\res\BtnRefresh.bmp" />
+    <Image Include="res\res\BtnStereo.bmp" />
+    <Image Include="res\res\BtnZoomFit.bmp" />
+    <Image Include="res\res\BtnZoomIn.bmp" />
+    <Image Include="res\res\BtnZoomOut.bmp" />
+    <Image Include="res\res\BtnZoomRect.bmp" />
+    <Image Include="res\res\button_z.bmp" />
+    <Image Include="res\res\DefCursor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\res\bicubic.frag" />
+    <CustomBuild Include="res\res\bicubic.vert" />
+    <CustomBuild Include="res\res\Hand.cur" />
+    <CustomBuild Include="res\res\Zoomrect.cur" />
+    <CustomBuild Include="res\SmartView.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CacheController.cpp" />
+    <ClCompile Include="CoordSys.cpp" />
+    <ClCompile Include="CoordWnd.cpp" />
+    <ClCompile Include="CursorFile.cpp" />
+    <ClCompile Include="CursorLayer.cpp" />
+    <ClCompile Include="D3DClass.cpp" />
+    <ClCompile Include="DlgCursorSetting.cpp" />
+    <ClCompile Include="DlgSlider.cpp" />
+    <ClCompile Include="DlgViewAdjust.cpp" />
+    <ClCompile Include="Drawing.cpp" />
+    <ClCompile Include="DrawingContext.cpp" />
+    <ClCompile Include="DrawingLayer.cpp" />
+    <ClCompile Include="DrawingLayerManager.cpp" />
+    <ClCompile Include="DrawLineDC.cpp" />
+    <ClCompile Include="DummyDialog.cpp" />
+    <ClCompile Include="DxFont.cpp" />
+    <ClCompile Include="Envelope.cpp" />
+    <ClCompile Include="GeometryBase.cpp" />
+    <ClCompile Include="GLDynamicTexture.cpp" />
+    <ClCompile Include="GlobalFunc.cpp" />
+    <ClCompile Include="GPUTexture.cpp" />
+    <ClCompile Include="Graph2dSearch.cpp" />
+    <ClCompile Include="GrBuffer.cpp" />
+    <ClCompile Include="GrBuffer2d.cpp" />
+    <ClCompile Include="GrElementList.cpp" />
+    <ClCompile Include="ImageAdjust.cpp" />
+    <ClCompile Include="ImageRead.cpp" />
+    <ClCompile Include="LongScrollCtrl.cpp" />
+    <ClCompile Include="Markup.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MemRasterLayer.cpp" />
+    <ClCompile Include="MutiRasterLayer.cpp" />
+    <ClCompile Include="NoDblClkButton.cpp" />
+    <ClCompile Include="Permanent.cpp" />
+    <ClCompile Include="PlotChar.cpp" />
+    <ClCompile Include="PlotWChar.cpp" />
+    <ClCompile Include="QSort2.cpp" />
+    <ClCompile Include="RasterLayer.cpp" />
+    <ClCompile Include="RealtimeDrawingLayer.cpp" />
+    <ClCompile Include="SceneView.cpp" />
+    <ClCompile Include="SceneViewEx.cpp" />
+    <ClCompile Include="SmartView.cpp" />
+    <ClCompile Include="SmartViewBaseType.cpp" />
+    <ClCompile Include="SmartViewFunctions.cpp" />
+    <ClCompile Include="SmartViewLocalRes.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SymbolBase.cpp" />
+    <ClCompile Include="textfile.cpp" />
+    <ClCompile Include="TextRender.cpp" />
+    <ClCompile Include="TextureObj.cpp" />
+    <ClCompile Include="TmpGraphLayer.cpp" />
+    <ClCompile Include="ValueTable.cpp" />
+    <ClCompile Include="VarPoint.cpp" />
+    <ClCompile Include="VectorLayer.cpp" />
+    <ClCompile Include="XVCtrlBar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CacheController.h" />
+    <ClInclude Include="CoordSys.h" />
+    <ClInclude Include="CoordWnd.h" />
+    <ClInclude Include="CursorFile.h" />
+    <ClInclude Include="CursorLayer.h" />
+    <ClInclude Include="D3DClass.h" />
+    <ClInclude Include="DlgCursorSetting.h" />
+    <ClInclude Include="DlgSlider.h" />
+    <ClInclude Include="DlgViewAdjust.h" />
+    <ClInclude Include="Drawing.h" />
+    <ClInclude Include="DrawingContext.h" />
+    <ClInclude Include="DrawingLayer.h" />
+    <ClInclude Include="DrawingLayerManager.h" />
+    <ClInclude Include="DrawLineDC.h" />
+    <ClInclude Include="DummyDialog.h" />
+    <ClInclude Include="DxFont.h" />
+    <ClInclude Include="Envelope.h" />
+    <ClInclude Include="GeometryBase.h" />
+    <ClInclude Include="GLDynamicTexture.h" />
+    <ClInclude Include="GlobalFunc.h" />
+    <ClInclude Include="GPUTexture.h" />
+    <ClInclude Include="Graph2dSearch.h" />
+    <ClInclude Include="GrBuffer.h" />
+    <ClInclude Include="GrBuffer2d.h" />
+    <ClInclude Include="GrElementList.h" />
+    <ClInclude Include="ImageAdjust.h" />
+    <ClInclude Include="ImageRead.h" />
+    <ClInclude Include="LongScrollCtrl.h" />
+    <ClInclude Include="Markup.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MemRasterLayer.h" />
+    <ClInclude Include="MutiRasterLayer.h" />
+    <ClInclude Include="NoDblClkButton.h" />
+    <ClInclude Include="Permanent.h" />
+    <ClInclude Include="PermanentType.h" />
+    <ClInclude Include="PlotChar.h" />
+    <ClInclude Include="PlotWChar.h" />
+    <ClInclude Include="RasterLayer.h" />
+    <ClInclude Include="RealtimeDrawingLayer.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="SceneView.h" />
+    <ClInclude Include="SceneViewEx.h" />
+    <ClInclude Include="SmartViewBaseType.h" />
+    <ClInclude Include="SmartViewDef.h" />
+    <ClInclude Include="SmartViewFunctions.h" />
+    <ClInclude Include="SmartViewLocalRes.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SymbolBase.h" />
+    <ClInclude Include="textfile.h" />
+    <ClInclude Include="TextRender.h" />
+    <ClInclude Include="TextureObj.h" />
+    <ClInclude Include="TmpGraphLayer.h" />
+    <ClInclude Include="ValueTable.h" />
+    <ClInclude Include="VarPoint.h" />
+    <ClInclude Include="VectorLayer.h" />
+    <ClInclude Include="XVCtrlBar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\SmartView.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="res\SmartView.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{433B8C9D-42C5-4F9C-93A1-87714492FED7}</ProjectGuid>
+    <RootNamespace>vpb</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <IntDir>$(SolutionDir)tmp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <IntDir>$(SolutionDir)tmp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;..\..\osg\include;..\..\gdal\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VPB_LIBRARY_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;..\..\osg\include;..\..\gdal\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;VPB_LIBRARY_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="..\src\vpb\CMakeLists.txt" />
+    <Text Include="src\vpb\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\vpb\BuildLog.cpp" />
+    <ClCompile Include="src\vpb\BuildOperation.cpp" />
+    <ClCompile Include="src\vpb\BuildOptions.cpp" />
+    <ClCompile Include="src\vpb\BuildOptionsIO.cpp" />
+    <ClCompile Include="src\vpb\Commandline.cpp" />
+    <ClCompile Include="src\vpb\DatabaseBuilder.cpp" />
+    <ClCompile Include="src\vpb\DatabaseBuilderIO.cpp" />
+    <ClCompile Include="src\vpb\DataSet.cpp" />
+    <ClCompile Include="src\vpb\Date.cpp" />
+    <ClCompile Include="src\vpb\Destination.cpp" />
+    <ClCompile Include="src\vpb\ExtrudeVisitor.cpp" />
+    <ClCompile Include="src\vpb\FileCache.cpp" />
+    <ClCompile Include="src\vpb\FileDetails.cpp" />
+    <ClCompile Include="src\vpb\FilePathManager.cpp" />
+    <ClCompile Include="src\vpb\FileUtils.cpp" />
+    <ClCompile Include="src\vpb\GeospatialDataset.cpp" />
+    <ClCompile Include="src\vpb\HeightFieldMapper.cpp" />
+    <ClCompile Include="src\vpb\MachinePool.cpp" />
+    <ClCompile Include="src\vpb\ObjectPlacer.cpp" />
+    <ClCompile Include="src\vpb\PropertyFile.cpp" />
+    <ClCompile Include="src\vpb\ShapeFilePlacer.cpp" />
+    <ClCompile Include="src\vpb\Source.cpp" />
+    <ClCompile Include="src\vpb\SourceData.cpp" />
+    <ClCompile Include="src\vpb\SpatialProperties.cpp" />
+    <ClCompile Include="src\vpb\System.cpp" />
+    <ClCompile Include="src\vpb\Task.cpp" />
+    <ClCompile Include="src\vpb\TaskManager.cpp" />
+    <ClCompile Include="src\vpb\TextureUtils.cpp" />
+    <ClCompile Include="src\vpb\ThreadPool.cpp" />
+    <ClCompile Include="src\vpb\Version.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

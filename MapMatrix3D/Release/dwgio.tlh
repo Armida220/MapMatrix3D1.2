@@ -1,0 +1,318 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.40629.0 (6433a70f).
+//
+// d:\2-zengworkspace\79-osgb测图new\featureone\featurecollector2009\release\dwgio.tlh
+//
+// C++ source equivalent of Win32 type library ../core/DwgIO/Release/DwgIO.tlb
+// compiler-generated file created 09/01/17 at 10:27:52 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("61f9bea2-52c8-422b-aa58-349b8caeab92"))
+/* LIBID */ __DwgIOLib;
+struct /* coclass */ DwgRead;
+struct __declspec(uuid("6656d3b6-da6a-4f8a-a5dc-09fec779d549"))
+/* dual interface */ IDwgRead;
+struct /* coclass */ DwgWrite;
+struct __declspec(uuid("cfecebac-b941-42b3-ba41-e219edb1a7c0"))
+/* dual interface */ IDwgWrite;
+struct /* coclass */ DwgConvert;
+struct __declspec(uuid("5dfbde6f-8613-425e-ab54-7c6ca59f3ae0"))
+/* dual interface */ IDwgConvert;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IDwgRead, __uuidof(IDwgRead));
+_COM_SMARTPTR_TYPEDEF(IDwgWrite, __uuidof(IDwgWrite));
+_COM_SMARTPTR_TYPEDEF(IDwgConvert, __uuidof(IDwgConvert));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("71154280-51c8-44d4-90b5-cf6f406f67c5"))
+DwgRead;
+    // [ default ] interface IDwgRead
+
+struct __declspec(uuid("6656d3b6-da6a-4f8a-a5dc-09fec779d549"))
+IDwgRead : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall OpenRead (
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall CloseRead ( ) = 0;
+      virtual HRESULT __stdcall get_Blocks ( ) = 0;
+      virtual HRESULT __stdcall get_BlocksCount (
+        /*[out]*/ long * nBlocks ) = 0;
+      virtual HRESULT __stdcall get_BlockItem (
+        /*[in]*/ VARIANT index,
+        /*[out]*/ BSTR * name,
+        /*[out]*/ long * count ) = 0;
+      virtual HRESULT __stdcall get_BlockEntity (
+        /*[in]*/ VARIANT index,
+        /*[out]*/ BSTR * name ) = 0;
+      virtual HRESULT __stdcall get_objCount (
+        /*[out]*/ long * nObjs ) = 0;
+      virtual HRESULT __stdcall get_ObjItem (
+        /*[in]*/ long index,
+        /*[out]*/ BSTR * layername,
+        /*[out]*/ BSTR * ObjType,
+        /*[out]*/ VARIANT * varType,
+        /*[out]*/ VARIANT * varValue ) = 0;
+      virtual HRESULT __stdcall get_entityBlockReference (
+        /*[out]*/ VARIANT * pVar ) = 0;
+      virtual HRESULT __stdcall get_entityDbPoint (
+        /*[out]*/ VARIANT * pVar ) = 0;
+      virtual HRESULT __stdcall get_entityDbArc (
+        /*[out]*/ VARIANT * pVar,
+        /*[out]*/ double * startAng,
+        /*[out]*/ double * endAng,
+        /*[out]*/ double * radius,
+        /*[out]*/ double * lfthick ) = 0;
+      virtual HRESULT __stdcall get_entityDbCircle (
+        /*[out]*/ VARIANT * pVar,
+        /*[out]*/ double * radius,
+        /*[out]*/ double * lfthick ) = 0;
+      virtual HRESULT __stdcall get_entityDbPolyline (
+        /*[out]*/ VARIANT * pVar,
+        /*[out]*/ double * height,
+        /*[out]*/ VARIANT_BOOL * closed,
+        /*[out]*/ double * lfthick ) = 0;
+      virtual HRESULT __stdcall get_entityDbLine (
+        /*[out]*/ VARIANT * var1,
+        /*[out]*/ VARIANT * var2,
+        /*[out]*/ double * lfthick ) = 0;
+      virtual HRESULT __stdcall get_entityDb2dPolyline (
+        /*[out]*/ VARIANT * var,
+        /*[out]*/ double * height,
+        /*[out]*/ VARIANT_BOOL * closed,
+        /*[out]*/ double * lfthick ) = 0;
+      virtual HRESULT __stdcall get_entityDb3dpolyline (
+        /*[out]*/ VARIANT * var,
+        /*[out]*/ VARIANT_BOOL * closed ) = 0;
+      virtual HRESULT __stdcall get_entityDbSpline (
+        /*[out]*/ long * nCtrlPoints,
+        /*[out]*/ VARIANT * var,
+        /*[out]*/ VARIANT_BOOL * closed ) = 0;
+      virtual HRESULT __stdcall get_entityDbText (
+        /*[out]*/ VARIANT * var,
+        /*[out]*/ double * lfthick ) = 0;
+      virtual HRESULT __stdcall get_entityDbBlockReferenceEx (
+        /*[out]*/ double * rotation,
+        /*[out]*/ double * kx,
+        /*[out]*/ double * ky,
+        /*[out]*/ double * kz,
+        /*[out]*/ BSTR * name ) = 0;
+      virtual HRESULT __stdcall get_entityDbTextEx (
+        /*[out]*/ BSTR * text,
+        /*[out]*/ double * height,
+        /*[out]*/ double * WidthFactor,
+        /*[out]*/ double * rotation,
+        /*[out]*/ double * obliAngle,
+        /*[out]*/ long * align,
+        /*[out]*/ BSTR * stylename ) = 0;
+      virtual HRESULT __stdcall get_entityColor (
+        /*[out]*/ long * color ) = 0;
+      virtual HRESULT __stdcall get_entityLinetype (
+        /*[out]*/ BSTR * ltname ) = 0;
+      virtual HRESULT __stdcall get_layerColor (
+        /*[in]*/ BSTR name,
+        /*[out]*/ long * color ) = 0;
+      virtual HRESULT __stdcall get_fontFileName (
+        /*[in]*/ BSTR stylename,
+        /*[out]*/ BSTR * fontFileName ) = 0;
+      virtual HRESULT __stdcall get_entityHatch (
+        /*[out]*/ long * nLoops,
+        /*[out]*/ double * height ) = 0;
+      virtual HRESULT __stdcall get_entityHatchLoopAt (
+        /*[in]*/ long index,
+        /*[out]*/ VARIANT * pVar ) = 0;
+      virtual HRESULT __stdcall get_entityHatchElement (
+        /*[in]*/ IDispatch * pData,
+        /*[out]*/ VARIANT * pVar,
+        /*[out]*/ double * lfthick ) = 0;
+};
+
+struct __declspec(uuid("3185bff4-b744-4baf-a59a-718b089f5d73"))
+DwgWrite;
+    // [ default ] interface IDwgWrite
+
+struct __declspec(uuid("cfecebac-b941-42b3-ba41-e219edb1a7c0"))
+IDwgWrite : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall OpenWrite (
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall CloseWrite ( ) = 0;
+      virtual HRESULT __stdcall Savelayer (
+        /*[in]*/ BSTR name,
+        /*[in]*/ long color,
+        /*[in]*/ long lineWeight ) = 0;
+      virtual HRESULT __stdcall SavePoint (
+        /*[in]*/ VARIANT varPts ) = 0;
+      virtual HRESULT __stdcall SaveText (
+        /*[in]*/ BSTR text,
+        /*[in]*/ VARIANT pt,
+        /*[in]*/ double height,
+        /*[in]*/ long align,
+        /*[in]*/ double widScale,
+        /*[in]*/ double angle,
+        /*[in]*/ float obangle,
+        /*[in]*/ BSTR stylename ) = 0;
+      virtual HRESULT __stdcall SaveCircle (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ double r ) = 0;
+      virtual HRESULT __stdcall SaveArc (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ double r,
+        /*[in]*/ double ang1,
+        /*[in]*/ double ang2 ) = 0;
+      virtual HRESULT __stdcall Save3DPolyline (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ VARIANT_BOOL closed ) = 0;
+      virtual HRESULT __stdcall SaveLWPolyline (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ VARIANT_BOOL closed,
+        /*[in]*/ double elev,
+        /*[in]*/ long ptsize,
+        /*[in]*/ double wid,
+        /*[in]*/ double thick ) = 0;
+      virtual HRESULT __stdcall AddLinetype (
+        /*[in]*/ BSTR name,
+        /*[in]*/ double length,
+        /*[in]*/ long numDashes ) = 0;
+      virtual HRESULT __stdcall put_DashLengthAt (
+        /*[in]*/ long index,
+        /*[in]*/ double val ) = 0;
+      virtual HRESULT __stdcall ReleaseLineType ( ) = 0;
+      virtual HRESULT __stdcall AddTextStyle (
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR fontFile,
+        /*[in]*/ double angle,
+        /*[in]*/ double width ) = 0;
+      virtual HRESULT __stdcall SetEntity (
+        /*[in]*/ long bTrueColor,
+        /*[in]*/ long color,
+        /*[in]*/ BSTR linetype,
+        /*[in]*/ BSTR layname,
+        /*[in]*/ BSTR casscode ) = 0;
+      virtual HRESULT __stdcall AddBlock3DPolyHatch (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ BSTR layname,
+        /*[in]*/ BSTR casscode ) = 0;
+      virtual HRESULT __stdcall AddBlockLWPolyHatch (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ double elevation,
+        /*[in]*/ BSTR layname,
+        /*[in]*/ BSTR casscode ) = 0;
+      virtual HRESULT __stdcall get_BlockNames (
+        /*[out]*/ BSTR * blkNames ) = 0;
+      virtual HRESULT __stdcall InsertBlock (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ BSTR blkName,
+        /*[in]*/ double xScale,
+        /*[in]*/ double yScale,
+        /*[in]*/ double zScale,
+        /*[in]*/ double rotation ) = 0;
+      virtual HRESULT __stdcall addBlock (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ BSTR blkName ) = 0;
+      virtual HRESULT __stdcall AddBlockPoint (
+        /*[in]*/ VARIANT varPts ) = 0;
+      virtual HRESULT __stdcall AddBlockLWPoly (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ long ptsize,
+        /*[in]*/ double wid ) = 0;
+      virtual HRESULT __stdcall AddBlockText (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ BSTR text,
+        /*[in]*/ double height,
+        /*[in]*/ long align ) = 0;
+      virtual HRESULT __stdcall Add3DPolyHatch (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ BSTR layname,
+        /*[in]*/ BSTR casscode ) = 0;
+      virtual HRESULT __stdcall AddLWPolyHatch (
+        /*[in]*/ VARIANT varPts,
+        /*[in]*/ double elevation,
+        /*[in]*/ BSTR layname,
+        /*[in]*/ BSTR casscode ) = 0;
+      virtual HRESULT __stdcall get_Blocks ( ) = 0;
+};
+
+struct __declspec(uuid("b961295a-7945-4c46-ac6f-d68e316767c9"))
+DwgConvert;
+    // [ default ] interface IDwgConvert
+
+struct __declspec(uuid("5dfbde6f-8613-425e-ab54-7c6ca59f3ae0"))
+IDwgConvert : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall OpenRead (
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall CloseRead ( ) = 0;
+      virtual HRESULT __stdcall get_objCount (
+        /*[out]*/ long * nSum ) = 0;
+      virtual HRESULT __stdcall get_ObjItem (
+        /*[in]*/ long index,
+        /*[out]*/ BSTR * ObjType ) = 0;
+      virtual HRESULT __stdcall TransformBy (
+        /*[in]*/ VARIANT var ) = 0;
+      virtual HRESULT __stdcall get_entityPts (
+        /*[out]*/ VARIANT * varPts ) = 0;
+      virtual HRESULT __stdcall put_entityPts (
+        /*[in]*/ VARIANT varPts ) = 0;
+      virtual HRESULT __stdcall get_entityPts2 (
+        /*[out]*/ VARIANT * var1,
+        /*[out]*/ VARIANT * var2 ) = 0;
+      virtual HRESULT __stdcall put_entityPts2 (
+        /*[in]*/ VARIANT var1,
+        /*[in]*/ VARIANT var2 ) = 0;
+      virtual HRESULT __stdcall get_AcDbSpline (
+        /*[out]*/ long * nCtrlPoints ) = 0;
+      virtual HRESULT __stdcall get_AcDbSplinePtAt (
+        /*[in]*/ long index,
+        /*[out]*/ VARIANT * pVar ) = 0;
+      virtual HRESULT __stdcall put_AcDbSplinePtAt (
+        /*[in]*/ long index,
+        /*[in]*/ VARIANT var ) = 0;
+      virtual HRESULT __stdcall release_AcDbSpline ( ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_DwgIOLib =
+    {0x61f9bea2,0x52c8,0x422b,{0xaa,0x58,0x34,0x9b,0x8c,0xae,0xab,0x92}};
+extern "C" const GUID __declspec(selectany) CLSID_DwgRead =
+    {0x71154280,0x51c8,0x44d4,{0x90,0xb5,0xcf,0x6f,0x40,0x6f,0x67,0xc5}};
+extern "C" const GUID __declspec(selectany) IID_IDwgRead =
+    {0x6656d3b6,0xda6a,0x4f8a,{0xa5,0xdc,0x09,0xfe,0xc7,0x79,0xd5,0x49}};
+extern "C" const GUID __declspec(selectany) CLSID_DwgWrite =
+    {0x3185bff4,0xb744,0x4baf,{0xa5,0x9a,0x71,0x8b,0x08,0x9f,0x5d,0x73}};
+extern "C" const GUID __declspec(selectany) IID_IDwgWrite =
+    {0xcfecebac,0xb941,0x42b3,{0xba,0x41,0xe2,0x19,0xed,0xb1,0xa7,0xc0}};
+extern "C" const GUID __declspec(selectany) CLSID_DwgConvert =
+    {0xb961295a,0x7945,0x4c46,{0xac,0x6f,0xd6,0x8e,0x31,0x67,0x67,0xc9}};
+extern "C" const GUID __declspec(selectany) IID_IDwgConvert =
+    {0x5dfbde6f,0x8613,0x425e,{0xab,0x54,0x7c,0x6c,0xa5,0x9f,0x3a,0xe0}};
+
+#pragma pack(pop)

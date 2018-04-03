@@ -1,0 +1,20 @@
+// Association.cpp: implementation of the CAssociation class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "EditBase.h"
+#include "Association.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+
+IMPLEMENT_DYNAMIC(CAssociation, CPermanent)
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+

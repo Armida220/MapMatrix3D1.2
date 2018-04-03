@@ -1,0 +1,525 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (a8d90ad4).
+//
+// DataDriver.tlh
+//
+// C++ source equivalent of Win32 type library ..\..\bin\IGDG\DataDriver.tlb
+// compiler-generated file created 09/12/14 at 09:29:59 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+typedef enum __MIDL___MIDL_itf_DataDriver_0215_0001 BandFormat;
+typedef enum __MIDL___MIDL_itf_DataDriver_0215_0002 ByteOrder;
+typedef enum __MIDL___MIDL_itf_DataDriver_0215_0003 DataType;
+typedef enum __MIDL___MIDL_itf_DataDriver_0215_0004 KEYTYPE;
+struct /* coclass */ ImageDriver;
+struct __declspec(uuid("6aa09767-26e1-430a-bcb4-5cf55bde9a20"))
+/* dual interface */ IImage;
+struct __declspec(uuid("7ffca56a-b224-4d2a-b408-b05d2fd22fa9"))
+/* dual interface */ IGTIFTag;
+struct __declspec(uuid("6b65b8e2-1d33-46cf-932c-fc3a18f1449c"))
+/* dual interface */ IImageDriver;
+struct /* coclass */ DEMDriver;
+struct __declspec(uuid("67d4a78a-d175-4b84-9f96-ee2990c10e44"))
+/* dual interface */ IDEM;
+struct __declspec(uuid("6c181720-d0b6-486b-b2b0-eef63480ed98"))
+/* dual interface */ IFlatDEM;
+struct __declspec(uuid("7f4da4b5-318a-413d-b615-0cf24f89faa0"))
+/* dual interface */ IGCPDEM;
+struct __declspec(uuid("fef21e7f-07c8-4e7f-9383-8d69c4aca333"))
+/* dual interface */ IVectorDEM;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IImage, __uuidof(IImage));
+_COM_SMARTPTR_TYPEDEF(IGTIFTag, __uuidof(IGTIFTag));
+_COM_SMARTPTR_TYPEDEF(IImageDriver, __uuidof(IImageDriver));
+_COM_SMARTPTR_TYPEDEF(IDEM, __uuidof(IDEM));
+_COM_SMARTPTR_TYPEDEF(IFlatDEM, __uuidof(IFlatDEM));
+_COM_SMARTPTR_TYPEDEF(IGCPDEM, __uuidof(IGCPDEM));
+_COM_SMARTPTR_TYPEDEF(IVectorDEM, __uuidof(IVectorDEM));
+
+//
+// Type library items
+//
+
+enum OpenFlags
+{
+    modeRead = 0,
+    modeWrite = 1,
+    modeReadWrite = 2,
+    modePyramidCreate = 256,
+    modePyramidClean = 512,
+    modeAqlut = 1024,
+    modePyramidRead = 2048,
+    shareCompat = 0,
+    shareExclusive = 16,
+    shareDenyWrite = 32,
+    shareDenyRead = 48,
+    shareDenyNone = 64,
+    modeNoInherit = 128,
+    modeCreate = 4096,
+    modeNoTruncate = 8192
+};
+
+enum Altitude
+{
+    INVALID_ALTITUDE = -99999
+};
+
+enum DEMType
+{
+    DT_GRID = 0,
+    DT_TIN = 1
+};
+
+enum __MIDL___MIDL_itf_DataDriver_0215_0001
+{
+    BIP = 0,
+    BIL = 1,
+    BSQ = 2
+};
+
+enum __MIDL___MIDL_itf_DataDriver_0215_0002
+{
+    Intel = 0,
+    IEEE = 1
+};
+
+enum __MIDL___MIDL_itf_DataDriver_0215_0003
+{
+    Pixel_Byte = 0,
+    Pixel_Int16 = 1,
+    Pixel_SInt16 = 2,
+    Pixel_Int32 = 3,
+    Pixel_SInt32 = 4,
+    Pixel_Float = 5,
+    Pixel_Double = 6,
+    Pixel_Int64 = 7,
+    Pixel_SInt64 = 8
+};
+
+enum __MIDL___MIDL_itf_DataDriver_0215_0004
+{
+    KTYP_BYTE = 1,
+    KTYP_SHORT = 2,
+    KTYP_LONG = 3,
+    KTYP_RATIONAL = 4,
+    KTYP_ASCII = 5,
+    KTYP_FLOAT = 6,
+    KTYP_DOUBLE = 7,
+    KTYP_SBYTE = 8,
+    KTYP_SSHORT = 9,
+    KTYP_SLONG = 10,
+    KTYP_UNKNOWN = 11
+};
+
+struct __declspec(uuid("75ff8df6-3b5a-44be-8bf0-8aa5907977d5"))
+ImageDriver;
+    // [ default ] interface IImage
+    // interface IGTIFTag
+    // interface IImageDriver
+
+struct __declspec(uuid("6aa09767-26e1-430a-bcb4-5cf55bde9a20"))
+IImage : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Open (
+        BSTR bstrPathName,
+        unsigned int uMode ) = 0;
+    virtual HRESULT __stdcall CreateImg (
+        BSTR bstrFilePath,
+        unsigned int uMode,
+        int Cols,
+        int Rows,
+        unsigned int DataType,
+        int nBandNum,
+        unsigned int BandType,
+        double xStart,
+        double yStart,
+        double cellSize ) = 0;
+    virtual HRESULT __stdcall Close ( ) = 0;
+    virtual HRESULT __stdcall IsGeoCoded ( ) = 0;
+    virtual HRESULT __stdcall GetBandFormat (
+        unsigned int * pBandFormat ) = 0;
+    virtual HRESULT __stdcall SetBandForamt (
+        unsigned int pBandFormat ) = 0;
+    virtual HRESULT __stdcall GetBandNum (
+        int * pBandNum ) = 0;
+    virtual HRESULT __stdcall SetBandNum (
+        int nBandNum ) = 0;
+    virtual HRESULT __stdcall GetRows (
+        int * pRows ) = 0;
+    virtual HRESULT __stdcall SetRows (
+        int nRows ) = 0;
+    virtual HRESULT __stdcall GetCols (
+        int * pCols ) = 0;
+    virtual HRESULT __stdcall SetCols (
+        int nCols ) = 0;
+    virtual HRESULT __stdcall GetDataType (
+        unsigned int * pDataType ) = 0;
+    virtual HRESULT __stdcall SetDataType (
+        unsigned int nDataType ) = 0;
+    virtual HRESULT __stdcall GetByteOrder (
+        unsigned int * pByteOrder ) = 0;
+    virtual HRESULT __stdcall SetByteOrder (
+        unsigned int nByteOrder ) = 0;
+    virtual HRESULT __stdcall GetScale (
+        float * pScale ) = 0;
+    virtual HRESULT __stdcall SetScale (
+        float Scale ) = 0;
+    virtual HRESULT __stdcall GetGrdInfo (
+        double * xStart,
+        double * yStart,
+        double * cellSize ) = 0;
+    virtual HRESULT __stdcall SetGrdInfo (
+        double xStart,
+        double yStart,
+        double cellSize ) = 0;
+    virtual HRESULT __stdcall HaveColorTable ( ) = 0;
+    virtual HRESULT __stdcall GetEntryNum (
+        int * pEntryNum ) = 0;
+    virtual HRESULT __stdcall GetColorTable (
+        unsigned char * pColorTable ) = 0;
+    virtual HRESULT __stdcall SetColorTable (
+        unsigned char * pColorTable,
+        int nEntryNum ) = 0;
+    virtual HRESULT __stdcall GetResampleMethod (
+        int * pResampleMethod ) = 0;
+    virtual HRESULT __stdcall SetResampleMethod (
+        int ResampleMethod ) = 0;
+    virtual HRESULT __stdcall GetScanSize (
+        float * pScanSize ) = 0;
+    virtual HRESULT __stdcall SetScanSize (
+        float ScanSize ) = 0;
+    virtual HRESULT __stdcall GetBPB (
+        int * pBPB ) = 0;
+    virtual HRESULT __stdcall SetBPB (
+        int nBPB ) = 0;
+    virtual HRESULT __stdcall GetBPP (
+        int * pBPP ) = 0;
+    virtual HRESULT __stdcall SetBPP (
+        int nBPP ) = 0;
+    virtual HRESULT __stdcall GetPathName (
+        BSTR * bstrPathName ) = 0;
+    virtual HRESULT __stdcall GetPixel (
+        int nRows,
+        int nCols,
+        unsigned char * pPixel ) = 0;
+    virtual HRESULT __stdcall SetPixel (
+        int nRows,
+        int nCols,
+        unsigned char * pPixel ) = 0;
+    virtual HRESULT __stdcall GetGray (
+        int nRows,
+        int nCols,
+        int nBand,
+        unsigned char * gray ) = 0;
+    virtual HRESULT __stdcall SetGray (
+        int nRows,
+        int nCols,
+        int nBand,
+        unsigned char * gray ) = 0;
+    virtual HRESULT __stdcall GetPixelF (
+        float x,
+        float y,
+        unsigned char * pPixel,
+        unsigned int nResampleMethod ) = 0;
+    virtual HRESULT __stdcall GetGrayF (
+        float x,
+        float y,
+        int nBand,
+        unsigned char * pGray,
+        int nResampleMethod ) = 0;
+    virtual HRESULT __stdcall ReadImg (
+        float fSrcLeft,
+        float fSrcTop,
+        float fSrcRight,
+        float fSrcBottom,
+        unsigned char * pBuf,
+        int nBufWid,
+        int nBufHeight,
+        int nBandNum,
+        int nDestLeft,
+        int nDestTop,
+        int nDestRight,
+        int nDestBottom,
+        int nSrcSkip,
+        int nDestSkip ) = 0;
+    virtual HRESULT __stdcall WriteImg (
+        float fSrcLeft,
+        float fSrcTop,
+        float fSrcRight,
+        float fSrcBottom,
+        unsigned char * pBuf,
+        int nBufWid,
+        int nBufHeight,
+        int nBandNum,
+        int nDestLeft,
+        int nDestTop,
+        int nDestRight,
+        int nDestBottom,
+        int nSrcSkip,
+        int nDestSkip ) = 0;
+    virtual HRESULT __stdcall SetProgressInterface (
+        IUnknown * pIUnknown ) = 0;
+    virtual HRESULT __stdcall GetSupExts (
+        unsigned char * lpszExts,
+        unsigned int flags ) = 0;
+    virtual HRESULT __stdcall Image2World (
+        float x,
+        float y,
+        double * pX,
+        double * pY ) = 0;
+    virtual HRESULT __stdcall World2Image (
+        double x,
+        double y,
+        float * pX,
+        float * pY ) = 0;
+    virtual HRESULT __stdcall GetDefaultBand (
+        int * nBandIndex ) = 0;
+    virtual HRESULT __stdcall GetCamera (
+        BSTR * bstrCamera ) = 0;
+    virtual HRESULT __stdcall SetCamera (
+        BSTR bstrCamera ) = 0;
+    virtual HRESULT __stdcall GetSensorType (
+        int * pSensorType ) = 0;
+    virtual HRESULT __stdcall SetSensorType (
+        int nSensorType ) = 0;
+    virtual HRESULT __stdcall GetDPI (
+        float * pxDPI,
+        float * pyDPI ) = 0;
+    virtual HRESULT __stdcall SetDPI (
+        float xDPI,
+        float yDPI ) = 0;
+};
+
+struct __declspec(uuid("7ffca56a-b224-4d2a-b408-b05d2fd22fa9"))
+IGTIFTag : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GTIFKeyGet (
+        unsigned int nKeyID,
+        unsigned char * pKeyValue,
+        int nKeyIndex,
+        int nCount ) = 0;
+    virtual HRESULT __stdcall GTIFKeySet (
+        unsigned int nKeyID,
+        unsigned int nKeyType,
+        int nCount,
+        unsigned char * pKeyValue ) = 0;
+    virtual HRESULT __stdcall GTIFFieldSet (
+        unsigned int nFieldID,
+        int nCount,
+        unsigned char * pFieldValue ) = 0;
+};
+
+struct __declspec(uuid("6b65b8e2-1d33-46cf-932c-fc3a18f1449c"))
+IImageDriver : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetStubIImage (
+        struct IImage * * ppIImage ) = 0;
+    virtual HRESULT __stdcall GetLUT (
+        unsigned char * * pLUT,
+        long * pLUTCount ) = 0;
+    virtual HRESULT __stdcall SetLUT (
+        unsigned char * * pLUT,
+        long nLUTCount ) = 0;
+};
+
+struct __declspec(uuid("90679bb7-01ae-49f3-a5de-9ef41c9967ed"))
+DEMDriver;
+    // [ default ] interface IDEM
+    // interface IFlatDEM
+    // interface IGCPDEM
+    // interface IVectorDEM
+
+struct __declspec(uuid("67d4a78a-d175-4b84-9f96-ee2990c10e44"))
+IDEM : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Open (
+        BSTR bstrPathName,
+        double lfAltitudeOffset,
+        unsigned int accMode ) = 0;
+    virtual HRESULT __stdcall Create (
+        BSTR bstrPathName,
+        BSTR bstrFormat,
+        unsigned int accMode,
+        int nRows,
+        int nCols,
+        double LBX,
+        double LBY,
+        double XCellSize,
+        double YCellSize ) = 0;
+    virtual HRESULT __stdcall GetAltitude (
+        double x,
+        double y,
+        double * pZ,
+        unsigned int uResampleMethod ) = 0;
+    virtual HRESULT __stdcall GetAverageAltitude (
+        double * pZ ) = 0;
+    virtual HRESULT __stdcall ConstrustTIN ( ) = 0;
+    virtual HRESULT __stdcall GetTriangleNum (
+        int * pTriangleNum ) = 0;
+    virtual HRESULT __stdcall GetTriangle (
+        int nTriIndex,
+        double * pX,
+        double * pY,
+        double * pZ ) = 0;
+    virtual HRESULT __stdcall GetVertex (
+        double * pX,
+        double * pY,
+        double * pZ,
+        int * pVertexNum ) = 0;
+    virtual HRESULT __stdcall GetIImage (
+        struct IImage * * ppIImage ) = 0;
+    virtual HRESULT __stdcall GetSupFormats (
+        unsigned char * lpszFormats,
+        unsigned int accMode ) = 0;
+    virtual HRESULT __stdcall GetSupExts (
+        unsigned char * lpszExts,
+        unsigned int accMode ) = 0;
+    virtual HRESULT __stdcall Close ( ) = 0;
+    virtual HRESULT __stdcall GetTIN (
+        unsigned long ppTriangulateio ) = 0;
+    virtual HRESULT __stdcall GetRange (
+        double * pLBX,
+        double * pLBY,
+        double * pRTX,
+        double * pRTY ) = 0;
+    virtual HRESULT __stdcall GetCellSize (
+        double * pXCellSize,
+        double * pYCellSize ) = 0;
+    virtual HRESULT __stdcall GetMaxAltitude (
+        double * pZ ) = 0;
+    virtual HRESULT __stdcall GetMinAltitude (
+        double * pZ ) = 0;
+    virtual HRESULT __stdcall GetType (
+        unsigned int * pType ) = 0;
+    virtual HRESULT __stdcall GetRows (
+        int * pRows ) = 0;
+    virtual HRESULT __stdcall GetCols (
+        int * pCols ) = 0;
+    virtual HRESULT __stdcall GetStartPos (
+        double * pX0,
+        double * pY0 ) = 0;
+    virtual HRESULT __stdcall GetAltitudeValues (
+        double * pZ ) = 0;
+    virtual HRESULT __stdcall IsSupported (
+        BSTR bstrPathName,
+        unsigned int accMode ) = 0;
+};
+
+struct __declspec(uuid("6c181720-d0b6-486b-b2b0-eef63480ed98"))
+IFlatDEM : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall SetFlatAltitude (
+        double Z ) = 0;
+    virtual HRESULT __stdcall CreateFlatDEM (
+        int nRows,
+        int nCols,
+        double LBX,
+        double LBY,
+        double Altitude,
+        double cellSize ) = 0;
+    virtual HRESULT __stdcall SetRange (
+        double LBX,
+        double LBY,
+        double RTX,
+        double RTY,
+        double cellSize ) = 0;
+    virtual HRESULT __stdcall SetCellSize (
+        double cellSize ) = 0;
+};
+
+struct __declspec(uuid("7f4da4b5-318a-413d-b615-0cf24f89faa0"))
+IGCPDEM : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall CreateGCPDEM (
+        BSTR bstrGcpFile ) = 0;
+    virtual HRESULT __stdcall SetRange (
+        double LBX,
+        double LBY,
+        double RTX,
+        double RTY ) = 0;
+};
+
+struct __declspec(uuid("fef21e7f-07c8-4e7f-9383-8d69c4aca333"))
+IVectorDEM : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall CreateVectorDEM (
+        BSTR bstrVectorFile ) = 0;
+    virtual HRESULT __stdcall SetRange (
+        double LBX,
+        double LBY,
+        double RTX,
+        double RTY ) = 0;
+    virtual HRESULT __stdcall TIN2DEM (
+        BSTR bstrDEMFile,
+        double LBX,
+        double LBY,
+        double RTX,
+        double RTY,
+        double lfCellSize ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_DATADRIVERLib =
+    {0xd1e1c8be,0xac4f,0x4011,{0x92,0x5d,0x7b,0xd6,0x9f,0xd3,0xf3,0xfa}};
+extern "C" const GUID __declspec(selectany) CLSID_ImageDriver =
+    {0x75ff8df6,0x3b5a,0x44be,{0x8b,0xf0,0x8a,0xa5,0x90,0x79,0x77,0xd5}};
+extern "C" const GUID __declspec(selectany) IID_IImage =
+    {0x6aa09767,0x26e1,0x430a,{0xbc,0xb4,0x5c,0xf5,0x5b,0xde,0x9a,0x20}};
+extern "C" const GUID __declspec(selectany) IID_IGTIFTag =
+    {0x7ffca56a,0xb224,0x4d2a,{0xb4,0x08,0xb0,0x5d,0x2f,0xd2,0x2f,0xa9}};
+extern "C" const GUID __declspec(selectany) IID_IImageDriver =
+    {0x6b65b8e2,0x1d33,0x46cf,{0x93,0x2c,0xfc,0x3a,0x18,0xf1,0x44,0x9c}};
+extern "C" const GUID __declspec(selectany) CLSID_DEMDriver =
+    {0x90679bb7,0x01ae,0x49f3,{0xa5,0xde,0x9e,0xf4,0x1c,0x99,0x67,0xed}};
+extern "C" const GUID __declspec(selectany) IID_IDEM =
+    {0x67d4a78a,0xd175,0x4b84,{0x9f,0x96,0xee,0x29,0x90,0xc1,0x0e,0x44}};
+extern "C" const GUID __declspec(selectany) IID_IFlatDEM =
+    {0x6c181720,0xd0b6,0x486b,{0xb2,0xb0,0xee,0xf6,0x34,0x80,0xed,0x98}};
+extern "C" const GUID __declspec(selectany) IID_IGCPDEM =
+    {0x7f4da4b5,0x318a,0x413d,{0xb6,0x15,0x0c,0xf2,0x4f,0x89,0xfa,0xa0}};
+extern "C" const GUID __declspec(selectany) IID_IVectorDEM =
+    {0xfef21e7f,0x07c8,0x4e7f,{0x93,0x83,0x8d,0x69,0xc4,0xac,0xa3,0x33}};
+
+#pragma pack(pop)

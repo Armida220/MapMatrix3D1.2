@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F224B658-8B7E-4065-9E0F-F5F6DF0A3221}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mm3dViewer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\bin_MapMatrix3D\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MM3DVIEWER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MM3DVIEWER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MM3DVIEWER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../osg/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MM3DVIEWER_EXPORTS;CALLLIBDLL;MFCVIEWERIBDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../../3rdParty/osg/include;../../../3rdParty/json/include;../../../3rdParty/opencv2_1/include/opencv</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../../3rdParty/osg/lib;../../../3rdParty/opencv2_1/lib;../../../3rdParty/json/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenThreads.lib;osg.lib;osgDB.lib;osgGA.lib;osgManipulator.lib;osgViewer.lib;osgUtil.lib;osgText.lib;jsoncpp.lib;cxcore210.lib;cv210.lib;highgui210.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../lib_MapMatrix3D/mm3dViewer.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(OutDir)$(TargetFileName) $(OutDir)..\package\ /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbsoluteOrientationor.h" />
+    <ClInclude Include="AtomicSafeQueue.h" />
+    <ClInclude Include="BaseDrawer.h" />
+    <ClInclude Include="BaseUserEvent.h" />
+    <ClInclude Include="CallBack.h" />
+    <ClInclude Include="CameraDriveTo.h" />
+    <ClInclude Include="CameraPanTo.h" />
+    <ClInclude Include="CameraZoomTo.h" />
+    <ClInclude Include="Compass.h" />
+    <ClInclude Include="CondSafeQueue.h" />
+    <ClInclude Include="coord.hpp" />
+    <ClInclude Include="CornerPtCatcher.h" />
+    <ClInclude Include="DriveToHighLightOperator.h" />
+    <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="FineCondQueue.h" />
+    <ClInclude Include="FineLockQueue.h" />
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="HomeOperator.h" />
+    <ClInclude Include="IBaseDrawer.h" />
+    <ClInclude Include="ICallBack.h" />
+    <ClInclude Include="IOsgOrient.h" />
+    <ClInclude Include="IOsgEvent.h" />
+    <ClInclude Include="IOsgRepair.h" />
+    <ClInclude Include="IViewer.h" />
+    <ClInclude Include="LockSafeQueue.h" />
+    <ClInclude Include="MFC_OSG.h" />
+    <ClInclude Include="my_matrix_compu.hpp" />
+    <ClInclude Include="NodeAddOperator.h" />
+    <ClInclude Include="NodeOperator.h" />
+    <ClInclude Include="NodeRemoveOperator.h" />
+    <ClInclude Include="OsgAbsOriEvent.h" />
+    <ClInclude Include="OsgClipEvent.h" />
+    <ClInclude Include="osgEvent.h" />
+    <ClInclude Include="OsgHeightLocker.h" />
+    <ClInclude Include="OsgModel.h" />
+    <ClInclude Include="OsgPicker.h" />
+    <ClInclude Include="osgRepair.h" />
+    <ClInclude Include="osgRepairHoleEvent.h" />
+    <ClInclude Include="OsgSyn.h" />
+    <ClInclude Include="osgTransNodeFinder.h" />
+    <ClInclude Include="OsgUserData.h" />
+    <ClInclude Include="OsgVertextExtract.h" />
+    <ClInclude Include="projection_matrix_transform.hpp" />
+    <ClInclude Include="Prompter.h" />
+    <ClInclude Include="QR.hpp" />
+    <ClInclude Include="RemoveAllOperator.h" />
+    <ClInclude Include="SceneRepairor.h" />
+    <ClInclude Include="SelfStateManipulator.h" />
+    <ClInclude Include="OsgUnknowEvent.h" />
+    <ClInclude Include="qcomm.h" />
+    <ClInclude Include="seldefViewer.h" />
+    <ClInclude Include="SelfDefTerrainManipulator.h" />
+    <ClInclude Include="SetHomerOperator.h" />
+    <ClInclude Include="SevenParameter.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThreadSafeQueue.h" />
+    <ClInclude Include="ThreadSafeUpdateCallback.h" />
+    <ClInclude Include="TimeKeeper.h" />
+    <ClInclude Include="UnknowHandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AbsoluteOrientationor.cpp" />
+    <ClCompile Include="BaseDrawer.cpp" />
+    <ClCompile Include="BaseUserEvent.cpp" />
+    <ClCompile Include="CallBack.cpp" />
+    <ClCompile Include="CameraDriveTo.cpp" />
+    <ClCompile Include="CameraPanTo.cpp" />
+    <ClCompile Include="CameraZoomTo.cpp" />
+    <ClCompile Include="coord.cpp" />
+    <ClCompile Include="Compass.cpp" />
+    <ClCompile Include="CornerPtCatcher.cpp" />
+    <ClCompile Include="DriveToHighLightOperator.cpp" />
+    <ClCompile Include="EventHandler.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="HomeOperator.cpp" />
+    <ClCompile Include="IBaseDrawer.cpp" />
+    <ClCompile Include="ICallBack.cpp" />
+    <ClCompile Include="IOsgOrient.cpp" />
+    <ClCompile Include="IOsgEvent.cpp" />
+    <ClCompile Include="IOsgRepair.cpp" />
+    <ClCompile Include="IViewer.cpp" />
+    <ClCompile Include="MFC_OSG.cpp" />
+    <ClCompile Include="NodeAddOperator.cpp" />
+    <ClCompile Include="NodeOperator.cpp" />
+    <ClCompile Include="NodeRemoveOperator.cpp" />
+    <ClCompile Include="OsgAbsOriEvent.cpp" />
+    <ClCompile Include="OsgClipEvent.cpp" />
+    <ClCompile Include="osgEvent.cpp" />
+    <ClCompile Include="OsgHeightLocker.cpp" />
+    <ClCompile Include="OsgModel.cpp" />
+    <ClCompile Include="OsgPicker.cpp" />
+    <ClCompile Include="osgRepair.cpp" />
+    <ClCompile Include="osgRepairHoleEvent.cpp" />
+    <ClCompile Include="OsgSyn.cpp" />
+    <ClCompile Include="osgTransNodeFinder.cpp" />
+    <ClCompile Include="OsgUserData.cpp" />
+    <ClCompile Include="OsgVertextExtract.cpp" />
+    <ClCompile Include="projection_matrix_transform.cpp" />
+    <ClCompile Include="Prompter.cpp" />
+    <ClCompile Include="QR.cpp" />
+    <ClCompile Include="RemoveAllOperator.cpp" />
+    <ClCompile Include="SceneRepairor.cpp" />
+    <ClCompile Include="SelfStateManipulator.cpp" />
+    <ClCompile Include="OsgUnknowEvent.cpp" />
+    <ClCompile Include="qcomm.cpp" />
+    <ClCompile Include="seldefViewer.cpp" />
+    <ClCompile Include="SelfDefTerrainManipulator.cpp" />
+    <ClCompile Include="SetHomerOperator.cpp" />
+    <ClCompile Include="SevenParameter.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ThreadSafeUpdateCallback.cpp" />
+    <ClCompile Include="TimeKeeper.cpp" />
+    <ClCompile Include="UnknowHandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="my_matrix_compu.template" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
