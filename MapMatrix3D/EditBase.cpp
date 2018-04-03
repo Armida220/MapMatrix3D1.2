@@ -473,7 +473,7 @@ BOOL CEditBaseApp::InitInstance()
 	LoadStdProfileSettings(16);  // 加载标准 INI 文件选项(包括 MRU)
 	SetRegistryBase(_T("Settings"));
 
-	CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerWindows7));//CMFCVisualManagerWindows7 CMFCVisualManagerOfficeXP
+	/*CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerWindows7));*///CMFCVisualManagerWindows7 CMFCVisualManagerOfficeXP
 
 	InitContextMenuManager();
 	InitKeyboardManager();

@@ -2345,7 +2345,7 @@ void CCollectionViewBar::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* l
 {
 	// TODO: Add your message handler code here and/or call default
 
-	/*CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);*/
+	CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);
 }
 
 

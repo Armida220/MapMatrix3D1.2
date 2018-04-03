@@ -22,7 +22,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 protected:
-	virtual BOOL CanBeClosed() const { return FALSE; }
+	//virtual BOOL CanBeClosed() const { return FALSE; }
 
 	afx_msg void OnPaint();
 	afx_msg void OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp);

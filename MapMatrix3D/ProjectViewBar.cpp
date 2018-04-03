@@ -138,8 +138,6 @@ BEGIN_MESSAGE_MAP(CProjectViewBar, CDockablePane)
 	ON_UPDATE_COMMAND_UI(ID_POPUP_OPENPHOTO, OnUpdateOpenPhoto)
 	//}}AFX_MSG_MAP
 	ON_WM_DESTROY()
-	ON_WM_NCCALCSIZE()
-	ON_WM_NCPAINT()
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -1747,16 +1745,5 @@ void CProjectViewBar::OnCommitLocalFile()
 	delete pDataSource;
 }
 
-void CProjectViewBar::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp)
-{
-	// TODO: Add your message handler code here and/or call default
-
-	/*CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);*/
-}
 
 
-void CProjectViewBar::OnNcPaint()
-{
-	// TODO: Add your message handler code here
-	// Do not call CDockablePane::OnNcPaint() for painting messages
-}

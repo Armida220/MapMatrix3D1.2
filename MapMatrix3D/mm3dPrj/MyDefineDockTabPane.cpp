@@ -29,8 +29,8 @@ END_MESSAGE_MAP()
 // CMyDefineDockTabPane message handlers
 void CMyDefineDockTabPane::setNoClose()
 { 
-	m_dwControlBarStyle &= ~AFX_CBRS_CLOSE; 
-	m_dwControlBarStyle &= ~AFX_CBRS_AUTOHIDE; 
+	//m_dwControlBarStyle &= ~AFX_CBRS_CLOSE; 
+	//m_dwControlBarStyle &= ~AFX_CBRS_AUTOHIDE; 
 }
 
 void CMyDefineDockTabPane::OnPaint()
@@ -45,5 +45,5 @@ void CMyDefineDockTabPane::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS*
 {
 	// TODO: Add your message handler code here and/or call default
 
-	/*CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);*/
+	CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);
 }

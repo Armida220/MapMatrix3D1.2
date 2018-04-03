@@ -564,8 +564,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	hideToolBars();
 
-	// 启用 Visual Studio 2005 样式停靠窗口行为
-	CDockingManager::SetDockingMode(DT_SMART);
 	// 启用 Visual Studio 2005 样式停靠窗口自动隐藏行为
 	EnableAutoHidePanes(CBRS_ALIGN_ANY);
 
@@ -638,6 +636,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_ObsidianBlack);
 	CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));
+	CDockingManager::SetDockingMode(DT_SMART);
+
 
 	return 0;
 }
@@ -980,39 +980,35 @@ BOOL CMainFrame::CreateDockingWindows()
 {
 	// 工程栏
 	if (!m_wndProjectView.Create(StrFromResID(IDS_PROJECT_TITLE), this, CRect(0, 0, 200, 200),
-		FALSE,
+		TRUE,
 		ID_VIEW_PROJECT,
-		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_BOTTOM | CBRS_FLOAT_MULTI
-		| AFX_CBRS_REGULAR_TABS | AFX_CBRS_RESIZE))
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_BOTTOM | CBRS_FLOAT_MULTI))
 	{
 		TRACE0("Failed to create Record View bar\n");
 		return FALSE;      // fail to create
 	}
 	//图层管理
 	if (!m_wndFtrLayerView.Create(StrFromResID(IDS_LAYERVIEW_TITLE), this, CRect(0, 0, 200, 200),
-		FALSE,
+		TRUE,
 		ID_VIEW_LAYER,
-		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_BOTTOM | CBRS_FLOAT_MULTI
-		| AFX_CBRS_REGULAR_TABS | AFX_CBRS_RESIZE))
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_BOTTOM | CBRS_FLOAT_MULTI))
 	{
 		return FALSE;
 	}
 	// 采集栏
 	if (!m_wndCollectionView.Create(StrFromResID(IDS_COLLECT_TITLE), this, CRect(0, 0, 200, 200),
-		FALSE,
+		TRUE,
 		ID_VIEW_COLLECTION,
-		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI
-		| AFX_CBRS_REGULAR_TABS | AFX_CBRS_RESIZE))
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
 	{
 		TRACE0("Failed to create Collection View bar\n");
 		return FALSE;      // fail to create
 	}
 	// 属性窗口
 	if (!m_wndPropertiesBar.Create(StrFromResID(IDS_PROPERTY_TITLE), this, CRect(0, 0, 200, 200),
-		FALSE,
+		TRUE,
 		ID_VIEW_PROPERTIES,
-		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_BOTTOM | CBRS_FLOAT_MULTI
-		| AFX_CBRS_REGULAR_TABS | AFX_CBRS_RESIZE))
+		WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_BOTTOM | CBRS_FLOAT_MULTI))
 	{
 		TRACE0("Failed to create Properties Bar\n");
 		return FALSE;		// fail to create
@@ -1085,6 +1081,7 @@ BOOL CMainFrame::CreateDockingWindows()
 	m_wndPropertiesBar.AttachToTabWnd(&m_wndFtrLayerView, DM_SHOW, FALSE, NULL);
 	m_wndProjectView.AttachToTabWnd(&m_wndFtrLayerView, DM_SHOW, FALSE, NULL);
 
+	DockPane(&m_wndOutputBar);
 
 	//DockPane(&m_wndPropertiesBar);
 
@@ -4085,7 +4082,7 @@ void CMainFrame::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp)
 {
 	// TODO: Add your message handler code here and/or call default
 
-	//CMDIFrameWndEx::OnNcCalcSize(bCalcValidRects, lpncsp);
+	/*CMDIFrameWndEx::OnNcCalcSize(bCalcValidRects, lpncsp);*/
 }
 
 

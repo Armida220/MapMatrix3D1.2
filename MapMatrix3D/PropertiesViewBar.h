@@ -132,7 +132,7 @@ public:
 	// ¸üÐÂÊôÐÔ
 	void UpdateProperty(CValueTable& tab);
 
-	virtual CDockablePane* AttachToTabWnd(CDockablePane* pTabControlBarAttachTo, AFX_DOCK_METHOD dockMethod, BOOL bSetActive = TRUE, CDockablePane** ppTabbedControlBar = NULL);
+	/*virtual CDockablePane* AttachToTabWnd(CDockablePane* pTabControlBarAttachTo, AFX_DOCK_METHOD dockMethod, BOOL bSetActive = TRUE, CDockablePane** ppTabbedControlBar = NULL);*/
 	
 	// Generated message map functions
 protected:
@@ -174,7 +174,6 @@ protected:
 	CBrush m_brush;
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
-	virtual BOOL CanBeClosed() const { return FALSE; }
 
 	
 };
