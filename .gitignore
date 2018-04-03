@@ -13,3 +13,5 @@
 *.tlh
 *.ipch
 *.tlh
+*.aps
+*.suo
