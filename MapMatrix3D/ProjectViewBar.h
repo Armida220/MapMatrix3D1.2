@@ -126,12 +126,7 @@ protected:
 	afx_msg void OnDestroy( );
 	DECLARE_MESSAGE_MAP()
 
-	afx_msg void OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp);
 
-	afx_msg void OnNcPaint();
-
-protected:
-	virtual BOOL CanBeClosed() const { return FALSE; }
 };
 
 #endif // !defined(AFX_PROJECTVIEWBAR_H__22EC624A_1E2C_45BF_ACBD_6068CFE688F5__INCLUDED_)

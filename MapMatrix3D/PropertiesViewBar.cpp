@@ -2050,149 +2050,149 @@ void CPropertiesViewBar::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* l
 {
 	// TODO: Add your message handler code here and/or call default
 
-	/*CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);*/
+	CDockablePane::OnNcCalcSize(bCalcValidRects, lpncsp);
 }
 
 
-CDockablePane* CPropertiesViewBar::AttachToTabWnd(CDockablePane* pTabControlBarAttachTo,
-	AFX_DOCK_METHOD dockMethod, BOOL bSetActive, CDockablePane** ppTabbedControlBar)
-{
-	ASSERT_VALID(this);
-	ASSERT_VALID(pTabControlBarAttachTo);
-
-	if (ppTabbedControlBar != NULL)
-	{
-		*ppTabbedControlBar = NULL;
-	}
-
-	if (!pTabControlBarAttachTo->CanBeAttached() || !CanBeAttached())
-	{
-		return NULL; // invalid attempt to attach non-attachable control bar
-	}
-
-	// check whether pTabBar is derived from CTabbedPane. If so, we
-	// can attach this bar to it immediately. Otherwise, we need to create a
-	// new tabbed control bar and replace pTabControlBarAttachTo with it.
-	CBaseTabbedPane* pTabbedBarAttachTo = DYNAMIC_DOWNCAST(CBaseTabbedPane, pTabControlBarAttachTo);
-
-	BOOL bBarAttachToIsFloating = (pTabControlBarAttachTo->GetParentMiniFrame() != NULL);
-
-	CWnd* pOldParent = GetParent();
-	CRect rectWndTab; rectWndTab.SetRectEmpty();
-	if (pTabbedBarAttachTo == NULL)
-	{
-		CWnd* pTabParent = pTabControlBarAttachTo->GetParent();
-		if (DYNAMIC_DOWNCAST(CMFCBaseTabCtrl, pTabParent) != NULL)
-		{
-			pTabParent = pTabParent->GetParent();
-		}
-
-		pTabbedBarAttachTo = DYNAMIC_DOWNCAST(CBaseTabbedPane, pTabParent);
-
-		if (pTabbedBarAttachTo == NULL)
-		{
-			//pTabControlBarAttachTo->StoreRecentDockSiteInfo();
-
-			pTabControlBarAttachTo->GetWindowRect(rectWndTab);
-			pTabControlBarAttachTo->GetParent()->ScreenToClient(&rectWndTab);
-
-			{
-
-				ASSERT_VALID(this);
-				CRect rectTabBar;
-				GetWindowRect(&rectTabBar);
-				ASSERT_VALID(GetParent());
-				GetParent()->ScreenToClient(&rectTabBar);
-
-				CMyDefineDockTabPane* pTabbedBar = (CMyDefineDockTabPane*)m_pTabbedControlBarRTC->CreateObject();
-				ASSERT_VALID(pTabbedBar);
-
-				pTabbedBar->SetAutoDestroy(TRUE);
-				bool s = pTabbedBar->ModifyStyle(TRUE, AFX_CBRS_CLOSE);
-
-				if (!pTabbedBar->Create(_T(""), GetParent(), rectTabBar, TRUE, (UINT)-1, WS_CHILD | WS_VISIBLE| CBRS_LEFT | CBRS_HIDE_INPLACE 
-					| WS_CAPTION | AFX_CBRS_RESIZE | AFX_CBRS_REGULAR_TABS))
-				{
-					TRACE0("Failed to create tabbed control bar\n");
-					return NULL;
-				}
-
-				// override recent floating/docking info
-
-				pTabbedBar->m_recentDockInfo.m_recentMiniFrameInfo.m_rectDockedRect = m_recentDockInfo.m_recentMiniFrameInfo.m_rectDockedRect;
-				pTabbedBar->m_recentDockInfo.m_recentSliderInfo.m_rectDockedRect = m_recentDockInfo.m_recentSliderInfo.m_rectDockedRect;
-				pTabbedBar->m_recentDockInfo.m_rectRecentFloatingRect = m_recentDockInfo.m_rectRecentFloatingRect;
-
-				pTabbedBar->setNoClose();
-				pTabbedBarAttachTo = pTabbedBar;
-
-			}
-
-			ASSERT_VALID(pTabbedBarAttachTo);
-
-			pTabControlBarAttachTo->InsertPane(pTabbedBarAttachTo, pTabControlBarAttachTo);
-
-			if (!pTabControlBarAttachTo->ReplacePane(pTabbedBarAttachTo, dockMethod))
-			{
-				if (!bBarAttachToIsFloating)
-				{
-					RemovePaneFromDockManager(pTabbedBarAttachTo);
-				}
-				ASSERT(FALSE);
-				TRACE0("Failed to replace resizable control bar by tabbed control bar. \n");
-				delete pTabbedBarAttachTo;
-				return NULL;
-			}
-
-			pTabbedBarAttachTo->EnableDocking(pTabControlBarAttachTo->GetEnabledAlignment());
-			pTabbedBarAttachTo->SetPaneAlignment(pTabControlBarAttachTo->GetCurrentAlignment());
-
-			pTabControlBarAttachTo->UndockPane(TRUE);
-			pTabbedBarAttachTo->AddTab(pTabControlBarAttachTo, TRUE, bSetActive);
-			pTabControlBarAttachTo->EnableGripper(FALSE);
-		}
-	}
-
-	if (ppTabbedControlBar != NULL)
-	{
-		*ppTabbedControlBar = pTabbedBarAttachTo;
-	}
-
-	EnableGripper(FALSE);
-
-	// send before dock notification without guarantee that the bar will
-	// be attached to another dock bar
-	OnBeforeDock((CBasePane**)&pTabbedBarAttachTo, NULL, dockMethod);
-	// reassign the parentship to the tab bar
-	OnBeforeChangeParent(pTabbedBarAttachTo, TRUE);
-
-	// remove from miniframe
-	RemoveFromMiniframe(pTabbedBarAttachTo, dockMethod);
-
-	// AddTab returns TRUE only if this pointer is not tabbed control bar
-	//(tabbed control bar is destroyed by AddTab and its tab windows are copied
-	// to pTabbedBarAttachTo tabbed window)
-	BOOL bResult = pTabbedBarAttachTo->AddTab(this, TRUE, bSetActive);
-	if (bResult)
-	{
-		OnAfterChangeParent(pOldParent);
-		OnAfterDock(pTabbedBarAttachTo, NULL, dockMethod);
-	}
-
-	if (!rectWndTab.IsRectEmpty())
-	{
-		pTabbedBarAttachTo->SetWindowPos(NULL, rectWndTab.left, rectWndTab.top, rectWndTab.Width(), rectWndTab.Height(), SWP_NOZORDER | SWP_NOACTIVATE);
-
-		if (bResult)
-		{
-			AdjustDockingLayout();
-		}
-	}
-
-	pTabbedBarAttachTo->RecalcLayout();
-
-	return /*bResult ?*/ this/* : pTabbedBarAttachTo*/;
-}
+//CDockablePane* CPropertiesViewBar::AttachToTabWnd(CDockablePane* pTabControlBarAttachTo,
+//	AFX_DOCK_METHOD dockMethod, BOOL bSetActive, CDockablePane** ppTabbedControlBar)
+//{
+//	ASSERT_VALID(this);
+//	ASSERT_VALID(pTabControlBarAttachTo);
+//
+//	if (ppTabbedControlBar != NULL)
+//	{
+//		*ppTabbedControlBar = NULL;
+//	}
+//
+//	if (!pTabControlBarAttachTo->CanBeAttached() || !CanBeAttached())
+//	{
+//		return NULL; // invalid attempt to attach non-attachable control bar
+//	}
+//
+//	// check whether pTabBar is derived from CTabbedPane. If so, we
+//	// can attach this bar to it immediately. Otherwise, we need to create a
+//	// new tabbed control bar and replace pTabControlBarAttachTo with it.
+//	CBaseTabbedPane* pTabbedBarAttachTo = DYNAMIC_DOWNCAST(CBaseTabbedPane, pTabControlBarAttachTo);
+//
+//	BOOL bBarAttachToIsFloating = (pTabControlBarAttachTo->GetParentMiniFrame() != NULL);
+//
+//	CWnd* pOldParent = GetParent();
+//	CRect rectWndTab; rectWndTab.SetRectEmpty();
+//	if (pTabbedBarAttachTo == NULL)
+//	{
+//		CWnd* pTabParent = pTabControlBarAttachTo->GetParent();
+//		if (DYNAMIC_DOWNCAST(CMFCBaseTabCtrl, pTabParent) != NULL)
+//		{
+//			pTabParent = pTabParent->GetParent();
+//		}
+//
+//		pTabbedBarAttachTo = DYNAMIC_DOWNCAST(CBaseTabbedPane, pTabParent);
+//
+//		if (pTabbedBarAttachTo == NULL)
+//		{
+//			//pTabControlBarAttachTo->StoreRecentDockSiteInfo();
+//
+//			pTabControlBarAttachTo->GetWindowRect(rectWndTab);
+//			pTabControlBarAttachTo->GetParent()->ScreenToClient(&rectWndTab);
+//
+//			{
+//
+//				ASSERT_VALID(this);
+//				CRect rectTabBar;
+//				GetWindowRect(&rectTabBar);
+//				ASSERT_VALID(GetParent());
+//				GetParent()->ScreenToClient(&rectTabBar);
+//
+//				CMyDefineDockTabPane* pTabbedBar = (CMyDefineDockTabPane*)m_pTabbedControlBarRTC->CreateObject();
+//				ASSERT_VALID(pTabbedBar);
+//
+//				pTabbedBar->SetAutoDestroy(TRUE);
+//				bool s = pTabbedBar->ModifyStyle(TRUE, AFX_CBRS_CLOSE);
+//
+//				if (!pTabbedBar->Create(_T(""), GetParent(), rectTabBar, TRUE, (UINT)-1, WS_CHILD | WS_VISIBLE| CBRS_LEFT | CBRS_HIDE_INPLACE 
+//					| WS_CAPTION | AFX_CBRS_RESIZE | AFX_CBRS_REGULAR_TABS))
+//				{
+//					TRACE0("Failed to create tabbed control bar\n");
+//					return NULL;
+//				}
+//
+//				// override recent floating/docking info
+//
+//				pTabbedBar->m_recentDockInfo.m_recentMiniFrameInfo.m_rectDockedRect = m_recentDockInfo.m_recentMiniFrameInfo.m_rectDockedRect;
+//				pTabbedBar->m_recentDockInfo.m_recentSliderInfo.m_rectDockedRect = m_recentDockInfo.m_recentSliderInfo.m_rectDockedRect;
+//				pTabbedBar->m_recentDockInfo.m_rectRecentFloatingRect = m_recentDockInfo.m_rectRecentFloatingRect;
+//
+//				pTabbedBar->setNoClose();
+//				pTabbedBarAttachTo = pTabbedBar;
+//
+//			}
+//
+//			ASSERT_VALID(pTabbedBarAttachTo);
+//
+//			pTabControlBarAttachTo->InsertPane(pTabbedBarAttachTo, pTabControlBarAttachTo);
+//
+//			if (!pTabControlBarAttachTo->ReplacePane(pTabbedBarAttachTo, dockMethod))
+//			{
+//				if (!bBarAttachToIsFloating)
+//				{
+//					RemovePaneFromDockManager(pTabbedBarAttachTo);
+//				}
+//				ASSERT(FALSE);
+//				TRACE0("Failed to replace resizable control bar by tabbed control bar. \n");
+//				delete pTabbedBarAttachTo;
+//				return NULL;
+//			}
+//
+//			pTabbedBarAttachTo->EnableDocking(pTabControlBarAttachTo->GetEnabledAlignment());
+//			pTabbedBarAttachTo->SetPaneAlignment(pTabControlBarAttachTo->GetCurrentAlignment());
+//
+//			pTabControlBarAttachTo->UndockPane(TRUE);
+//			pTabbedBarAttachTo->AddTab(pTabControlBarAttachTo, TRUE, bSetActive);
+//			pTabControlBarAttachTo->EnableGripper(FALSE);
+//		}
+//	}
+//
+//	if (ppTabbedControlBar != NULL)
+//	{
+//		*ppTabbedControlBar = pTabbedBarAttachTo;
+//	}
+//
+//	EnableGripper(FALSE);
+//
+//	// send before dock notification without guarantee that the bar will
+//	// be attached to another dock bar
+//	OnBeforeDock((CBasePane**)&pTabbedBarAttachTo, NULL, dockMethod);
+//	// reassign the parentship to the tab bar
+//	OnBeforeChangeParent(pTabbedBarAttachTo, TRUE);
+//
+//	// remove from miniframe
+//	RemoveFromMiniframe(pTabbedBarAttachTo, dockMethod);
+//
+//	// AddTab returns TRUE only if this pointer is not tabbed control bar
+//	//(tabbed control bar is destroyed by AddTab and its tab windows are copied
+//	// to pTabbedBarAttachTo tabbed window)
+//	BOOL bResult = pTabbedBarAttachTo->AddTab(this, TRUE, bSetActive);
+//	if (bResult)
+//	{
+//		OnAfterChangeParent(pOldParent);
+//		OnAfterDock(pTabbedBarAttachTo, NULL, dockMethod);
+//	}
+//
+//	if (!rectWndTab.IsRectEmpty())
+//	{
+//		pTabbedBarAttachTo->SetWindowPos(NULL, rectWndTab.left, rectWndTab.top, rectWndTab.Width(), rectWndTab.Height(), SWP_NOZORDER | SWP_NOACTIVATE);
+//
+//		if (bResult)
+//		{
+//			AdjustDockingLayout();
+//		}
+//	}
+//
+//	pTabbedBarAttachTo->RecalcLayout();
+//
+//	return /*bResult ?*/ this/* : pTabbedBarAttachTo*/;
+//}
 
 
 void CPermanentExchanger::OnModifyLayer(LPCSTR str)
