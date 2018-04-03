@@ -5,12 +5,12 @@
 *.log
 *.pdb
 *.sdf
-*.suo
-*.suo
-*.suo
 *.opensdf
 *.sbr
 *.tlh
 *.ipch
 *.tlh
 *.aps
+*.suo
+MapMatrix3D/FeatureCollector2009.v12.suo
+

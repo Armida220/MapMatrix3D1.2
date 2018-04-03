@@ -111,6 +111,7 @@ BOOL CMM3DDialog::OnInitDialog()
 	CefRefPtr<CMm3dClientHandler> handler = new CMm3dClientHandler();
 	bool bSuccess = CefBrowserHost::CreateBrowser(window_info, handler.get(), url, browser_settings, NULL);
 
+	AfxGetMainWnd()->SetWindowPos(&CWnd::wndTopMost, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// EXCEPTION: OCX Property Pages should return FALSE
