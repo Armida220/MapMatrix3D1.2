@@ -4779,13 +4779,13 @@ void CVectorView_new::OnOsgbview()
 // 			dlg->ShowWindow(SW_SHOW);
 		}
 	
-		//矢量视图移动到左侧一半
-		this->GetParentFrame()->MoveWindow(CRect(left, top, right, bottom), TRUE);
+		////矢量视图移动到左侧一半
+		//this->GetParentFrame()->MoveWindow(CRect(left, top, right, bottom), TRUE);
 
-		//三维视图移动到右侧一半
-		pOsgbView->GetParentFrame()->MoveWindow(CRect(right, top, right + vectClt.Width() / 2, bottom), TRUE);
+		////三维视图移动到右侧一半
+		//pOsgbView->GetParentFrame()->MoveWindow(CRect(right, top, right + vectClt.Width() / 2, bottom), TRUE);
 
-
+		AfxGetMainWnd()->SendMessage(WM_COMMAND, MAKEWPARAM(ID_WINDOW_TILE_VERT, 0), 0);
 	}
 	else
 	{

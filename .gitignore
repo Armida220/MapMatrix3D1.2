@@ -9,3 +9,7 @@
 *.suo
 *.suo
 *.opensdf
+*.sbr
+*.tlh
+*.ipch
+*.tlh
