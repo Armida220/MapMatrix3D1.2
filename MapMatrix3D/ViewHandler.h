@@ -2,18 +2,18 @@
 #include <include/cef_v8.h>
 
 /*
-** brief 观察结果回调类
+** brief 视图回调类
 */
-class CDetectResultHandler
+class CViewHandler
 {
 public:
-	CDetectResultHandler();
-	virtual ~CDetectResultHandler();
+	CViewHandler();
+	virtual ~CViewHandler();
 
 	/*
 	** brief getInstance 返回回调函数的单例
 	*/
-	static CDetectResultHandler* getInstance();
+	static CViewHandler* getInstance();
 
 	/*
 	** brief handle 回调类处理函数

@@ -694,9 +694,9 @@ void CVectorView_new::OnMouseMove(UINT nFlags, CPoint point)
 
 void CVectorView_new::OnRButtonDown(UINT nFlags, CPoint point) 
 {
- 	//PT_4D pt;
- 	//pt.x = point.x, pt.y = point.y, pt.z = 0, pt.yr = 0;
- 	//ClientToGround(&pt,&m_gCurPoint);
+// 	PT_4D pt;
+// 	pt.x = point.x, pt.y = point.y, pt.z = 0, pt.yr = 0;
+// 	ClientToGround(&pt,&m_gCurPoint);
 
 	m_nInputType = STEREOVIEW_INPUT_SYSMOUSE;
 	

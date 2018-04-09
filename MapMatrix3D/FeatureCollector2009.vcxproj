@@ -357,6 +357,7 @@
     <ClCompile Include="Global\GeoBuilderContour.cpp" />
     <ClCompile Include="Global\GridContourX.cpp" />
     <ClCompile Include="Global\InterpolateContour.cpp" />
+    <ClCompile Include="GraphicEditHandler.cpp" />
     <ClCompile Include="GridCtrl_src\GridCell.cpp" />
     <ClCompile Include="GridCtrl_src\GridCellBase.cpp" />
     <ClCompile Include="GridCtrl_src\GridCtrl.cpp" />
@@ -390,14 +391,10 @@
     <ClCompile Include="mm3dPrj\CursorFile.cpp" />
     <ClCompile Include="mm3dPrj\CurveTypeHandler.cpp" />
     <ClCompile Include="mm3dPrj\DatabaseOpsHandler.cpp" />
-    <ClCompile Include="mm3dPrj\DetectResultHandler.cpp" />
     <ClCompile Include="mm3dPrj\DrawCircleHandler.cpp" />
     <ClCompile Include="mm3dPrj\DrawLineHandler.cpp" />
     <ClCompile Include="mm3dPrj\DrawPointHandler.cpp" />
     <ClCompile Include="mm3dPrj\DrawSurfaceHandler.cpp" />
-    <ClCompile Include="mm3dPrj\EditBaseHandler.cpp" />
-    <ClCompile Include="mm3dPrj\EditContourHandler.cpp" />
-    <ClCompile Include="mm3dPrj\EditVectorHandler.cpp" />
     <ClCompile Include="mm3dPrj\myAbsOriDlg.cpp" />
     <ClCompile Include="mm3dPrj\FtrParser.cpp" />
     <ClCompile Include="mm3dPrj\GeomParser.cpp" />
@@ -503,6 +500,7 @@
     <ClCompile Include="VectorView_EX.cpp" />
     <ClCompile Include="VectorView_GL.cpp" />
     <ClCompile Include="VectorView_new.cpp" />
+    <ClCompile Include="ViewHandler.cpp" />
     <ClCompile Include="ViewImgPosition.cpp" />
     <ClCompile Include="VisualModelMapCtrl.cpp" />
     <ClCompile Include="VVTAccess.cpp" />
@@ -696,6 +694,7 @@
     <ClInclude Include="Global\EqualIn.h" />
     <ClInclude Include="Global\GeoBuilderContour.h" />
     <ClInclude Include="Global\GridContourX.h" />
+    <ClInclude Include="GraphicEditHandler.h" />
     <ClInclude Include="GridCtrl_src\CellRange.h" />
     <ClInclude Include="GridCtrl_src\GridCell.h" />
     <ClInclude Include="GridCtrl_src\GridCellBase.h" />
@@ -726,14 +725,10 @@
     <ClInclude Include="mm3dPrj\CursorFile.h" />
     <ClInclude Include="mm3dPrj\CurveTypeHandler.h" />
     <ClInclude Include="mm3dPrj\DatabaseOpsHandler.h" />
-    <ClInclude Include="mm3dPrj\DetectResultHandler.h" />
     <ClInclude Include="mm3dPrj\DrawCircleHandler.h" />
     <ClInclude Include="mm3dPrj\DrawLineHandler.h" />
     <ClInclude Include="mm3dPrj\DrawPointHandler.h" />
     <ClInclude Include="mm3dPrj\DrawSurfaceHandler.h" />
-    <ClInclude Include="mm3dPrj\EditBaseHandler.h" />
-    <ClInclude Include="mm3dPrj\EditContourHandler.h" />
-    <ClInclude Include="mm3dPrj\EditVectorHandler.h" />
     <ClInclude Include="mm3dPrj\myAbsOriDlg.h" />
     <ClInclude Include="mm3dPrj\FtrParser.h" />
     <ClInclude Include="mm3dPrj\GeomParser.h" />
@@ -838,6 +833,7 @@
     <ClInclude Include="VectorView_EX.h" />
     <ClInclude Include="VectorView_GL.h" />
     <ClInclude Include="VectorView_new.h" />
+    <ClInclude Include="ViewHandler.h" />
     <ClInclude Include="VisualModelMapCtrl.h" />
     <ClInclude Include="VVTAccess.h" />
     <ClInclude Include="XFileDialog.h" />
