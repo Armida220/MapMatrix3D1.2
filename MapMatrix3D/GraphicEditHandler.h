@@ -1,19 +1,21 @@
 #pragma once
 #include <include/cef_v8.h>
 
+
+
 /*
-** brief 基础编辑回调类
+** brief 图形编辑回调类
 */
-class CEditBaseHandler
+class CGraphicEditHandler
 {
 public:
-	CEditBaseHandler();
-	virtual ~CEditBaseHandler();
+	CGraphicEditHandler();
+	virtual ~CGraphicEditHandler();
 
 	/*
 	** brief getInstance 返回回调函数的单例
 	*/
-	static CEditBaseHandler* getInstance();
+	static CGraphicEditHandler* getInstance();
 
 	/*
 	** brief handle 回调类处理函数

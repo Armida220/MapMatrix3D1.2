@@ -182,6 +182,15 @@ protected:
 	void CustDraw(NMHDR *pNotifyStruct, LRESULT *result);
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	DECLARE_MESSAGE_MAP()
+
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+
+	virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
+
+protected:
+	CBrush m_brush;
 };
 
 class CCheckResultViewBar : public CDockablePane  
@@ -195,7 +204,16 @@ public:
 			CMFCToolBar::OnUpdateCmdUI ((CFrameWnd*) GetOwner(), bDisableIfNoHndler);
 		}
 		virtual BOOL AllowShowOnList () const		{	return FALSE;	}
-		
+
+		virtual void DoPaint(CDC* pDCPaint);
+	
+	protected:
+		afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+
+		DECLARE_MESSAGE_MAP()
+
+	protected:
+		CBrush m_brush;
 	};
 
 	CCheckResultViewBar();
@@ -286,6 +304,8 @@ protected:
 	afx_msg void OnExport();
 	afx_msg LRESULT OnClickIcon(WPARAM wParam, LPARAM lParam);
 
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 	BOOL OnNeedTipText(UINT id, NMHDR* pNMH, LRESULT* pResult);
@@ -308,6 +328,8 @@ private:
 	BOOL m_bResultIterate;
 
 	BOOL m_bStopLocateResultPt;
+
+	CBrush m_brush;
 };
 
 #endif // !defined(AFX_CHECKRESULTVIEWBAR_H__E8053987_15C4_4E39_AF91_C0706C06FA2B__INCLUDED_)

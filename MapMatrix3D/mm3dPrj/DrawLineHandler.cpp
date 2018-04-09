@@ -25,7 +25,11 @@ void CDrawLineHandler::handle(const CefString& funcName, const CefV8ValueList& a
 	{
 		AfxGetApp()->GetMainWnd()->SendMessage(WM_COMMAND, MAKEWPARAM(ID_ELEMENT_LINE_LINE, 0), 0);
 	}
-	else if (funcName == _T("drawLineRect"))
+	else if (funcName == _T("drawDoubleLine"))
+	{
+		AfxGetApp()->GetMainWnd()->SendMessage(WM_COMMAND, MAKEWPARAM(ID_ELEMENT_LINE_DLINE, 0), 0);
+	}
+	else if (funcName == _T("drawRect"))
 	{
 		AfxGetApp()->GetMainWnd()->SendMessage(WM_COMMAND, MAKEWPARAM(ID_ELEMENT_LINE_RECT, 0), 0);
 	}
@@ -44,9 +48,5 @@ void CDrawLineHandler::handle(const CefString& funcName, const CefV8ValueList& a
 	else if (funcName == _T("drawPararellSingle"))
 	{
 		AfxGetApp()->GetMainWnd()->SendMessage(WM_COMMAND, MAKEWPARAM(ID_ELEMENT_LINE_SINGLEPARALLEL, 0), 0);
-	}
-	else if (funcName == _T("drawDoubleLine"))
-	{
-		AfxGetApp()->GetMainWnd()->SendMessage(WM_COMMAND, MAKEWPARAM(ID_ELEMENT_LINE_DLINE, 0), 0);
 	}
 }

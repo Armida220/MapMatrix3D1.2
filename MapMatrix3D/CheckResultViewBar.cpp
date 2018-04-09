@@ -1065,13 +1065,95 @@ CChkResSettings* CChkResSettings::Obj()
 }
 
 
+
+
 BEGIN_MESSAGE_MAP(CListCtrl0, CListCtrl)
 //{{AFX_MSG_MAP(CListEx)
 // NOTE - the ClassWizard will add and remove mapping macros here.
 //}}AFX_MSG_MAP
+	ON_WM_CREATE()
 	ON_NOTIFY_REFLECT(NM_CUSTOMDRAW, CustDraw)
 	ON_WM_LBUTTONDOWN()
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
+
+
+int CListCtrl0::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+	if (CListCtrl::OnCreate(lpCreateStruct) == -1)
+		return -1;
+
+	// TODO:  Add your specialized creation code here
+	SetTextColor(RGB(255, 255, 255));
+	SetBkColor(RGB(50, 50, 50));
+	SetTextBkColor(RGB(255, 0, 0));
+	return 0;
+}
+
+void CListCtrl0::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
+{
+	// TODO: Add your code to draw the specified item  
+	ASSERT(lpDrawItemStruct->CtlType == ODT_LISTVIEW);
+	CDC dc;
+	dc.Attach(lpDrawItemStruct->hDC);
+	ASSERT(NULL != dc.GetSafeHdc());
+	// Save these value to restore them when done drawing.  
+	COLORREF crOldTextColor = dc.GetTextColor();
+	COLORREF crOldBkColor = dc.GetBkColor();
+	crOldBkColor = RGB(0, 255, 0);
+	crOldTextColor = RGB(255, 0, 0);
+	// If this item is selected, set the background color   
+	// and the text color to appropriate values. Also, erase  
+	// rect by filling it with the background color.  
+	if ((lpDrawItemStruct->itemAction | ODA_SELECT) &&
+		(lpDrawItemStruct->itemState & ODS_SELECTED))
+	{
+		dc.SetTextColor(crOldTextColor);
+		dc.SetBkColor(crOldBkColor);
+		dc.FillSolidRect(&lpDrawItemStruct->rcItem,
+			::GetSysColor(COLOR_HIGHLIGHT));
+	}
+	else
+	{
+		if (lpDrawItemStruct->itemID % 2)
+			dc.FillSolidRect(&lpDrawItemStruct->rcItem, RGB(128, 0, 0));
+		else
+			dc.FillSolidRect(&lpDrawItemStruct->rcItem, RGB(255, 0, 0));
+	}
+
+	// If this item has the focus, draw a red frame around the  
+	// item's rect.  
+	if ((lpDrawItemStruct->itemAction | ODA_FOCUS) &&
+		(lpDrawItemStruct->itemState & ODS_FOCUS))
+	{
+		CBrush br(RGB(0, 0, 128));
+		dc.FrameRect(&lpDrawItemStruct->rcItem, &br);
+	}
+
+	// Draw the text.  
+	CString strText(_T(""));
+	CRect rcItem;
+
+	for (int i = 0; i < GetHeaderCtrl()->GetItemCount(); i++)
+	{
+		strText = GetItemText(lpDrawItemStruct->itemID, i);
+		GetSubItemRect(lpDrawItemStruct->itemID, i, LVIR_LABEL, rcItem);
+		rcItem.left += 5;
+		dc.DrawText(
+			strText,
+			strText.GetLength(),
+			&rcItem,
+			DT_LEFT | DT_SINGLELINE | DT_VCENTER);
+	}
+
+	// Reset the background color and the text color back to their  
+	// original values.  
+	dc.SetTextColor(crOldTextColor);
+	dc.SetBkColor(crOldBkColor);
+
+	dc.Detach();
+}
+
 
 void CListCtrl0::CustDraw(NMHDR *pNotifyStruct, LRESULT *result)
 {
@@ -1134,6 +1216,293 @@ void CListCtrl0::OnLButtonDown(UINT nFlags, CPoint point)
 	CListCtrl::OnLButtonDown(nFlags, point);
 }
 
+HBRUSH CListCtrl0::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CListCtrl::OnCtlColor(pDC, pWnd, nCtlColor);
+
+	pDC->SetTextColor(RGB(255, 255, 255));
+	m_brush.CreateSolidBrush(RGB(50, 50, 50));
+	return m_brush;
+
+	// TODO:  Change any attributes of the DC here
+
+	// TODO:  Return a different brush if the default is not desired
+	return hbr;
+}
+
+BEGIN_MESSAGE_MAP(CCheckResultViewBar::CMyToolBar, CMFCToolBar)
+	ON_WM_CTLCOLOR()
+END_MESSAGE_MAP()
+
+
+HBRUSH CCheckResultViewBar::CMyToolBar::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CCheckResultViewBar::CMyToolBar::OnCtlColor(pDC, pWnd, nCtlColor);
+
+	// TODO:  Change any attributes of the DC here
+	pDC->SetTextColor(RGB(255, 255, 255));
+	m_brush.CreateSolidBrush(RGB(50, 50, 50));
+	return m_brush;
+
+	// TODO:  Return a different brush if the default is not desired
+	return hbr;
+}
+
+void CCheckResultViewBar::CMyToolBar::DoPaint(CDC* pDCPaint)
+{
+	ASSERT_VALID(this);
+	ASSERT_VALID(pDCPaint);
+
+	CRect rectClip;
+	pDCPaint->GetClipBox(rectClip);
+
+	BOOL bHorz = GetCurrentAlignment() & CBRS_ORIENT_HORZ ? TRUE : FALSE;
+
+	CRect rectClient;
+	GetClientRect(rectClient);
+
+	CMemDC memDC(*pDCPaint, this);
+	CDC* pDC = &memDC.GetDC();
+
+	if ((GetStyle() & TBSTYLE_TRANSPARENT) == 0)
+	{
+		/*CMFCVisualManager::GetInstance()->OnFillBarBackground(pDC, this, rectClient, rectClip);*/
+		CRect rect;
+		GetClientRect(rect);
+		//Ìî³ä¿Í»§Çø   
+		pDC->FillSolidRect(rect, RGB(50, 50, 50));
+	}
+	else
+	{
+		/*m_Impl.GetBackgroundFromParent(pDC);*/
+	}
+
+	OnFillBackground(pDC);
+
+	pDC->SetTextColor(GetGlobalData()->clrBtnText);
+	pDC->SetBkMode(TRANSPARENT);
+
+	CRect rect;
+	GetClientRect(rect);
+
+	// Force the full size of the button:
+	if (bHorz)
+	{
+		rect.bottom = rect.top + GetRowHeight();
+	}
+	else
+	{
+		rect.right = rect.left + GetColumnWidth();
+	}
+
+	BOOL bDontScaleImages = m_bLocked ? m_bDontScaleLocked : m_bDontScaleImages;
+	const double dblImageScale = bDontScaleImages ? 1.0 : GetGlobalData()->GetRibbonImageScale();
+
+	CMFCToolBarImages* pImages = GetImageList(m_Images, m_ImagesLocked, m_LargeImages, m_LargeImagesLocked);
+	CMFCToolBarImages* pHotImages = pImages;
+	CMFCToolBarImages* pColdImages = GetImageList(m_ColdImages, m_ColdImagesLocked, m_LargeColdImages, m_LargeColdImagesLocked);
+	CMFCToolBarImages* pDisabledImages = GetImageList(m_DisabledImages, m_DisabledImagesLocked, m_LargeDisabledImages, m_LargeDisabledImagesLocked);
+	CMFCToolBarImages* pMenuImages = !m_bLocked ? &m_MenuImages : &m_MenuImagesLocked;
+	CMFCToolBarImages* pDisabledMenuImages = !m_bLocked ? &m_DisabledMenuImages : &m_DisabledMenuImagesLocked;
+
+	BOOL bDrawImages = pImages->IsValid();
+
+	pHotImages->SetTransparentColor(GetGlobalData()->clrBtnFace);
+
+	BOOL bFadeInactiveImages = CMFCVisualManager::GetInstance()->IsFadeInactiveImage();
+
+	CSize sizeImageDest = m_bMenuMode ? m_sizeMenuImage : GetImageSize();
+	if (dblImageScale != 1.)
+	{
+		if (m_bMenuMode && sizeImageDest == CSize(-1, -1))
+		{
+			sizeImageDest = GetImageSize();
+
+			if (dblImageScale > 1. && m_bLargeIconsAreEnbaled)
+			{
+				sizeImageDest = m_sizeImage;
+			}
+		}
+
+		sizeImageDest = CSize((int)(.5 + sizeImageDest.cx * dblImageScale), (int)(.5 + sizeImageDest.cy * dblImageScale));
+	}
+
+	CAfxDrawState ds;
+	if (bDrawImages)
+	{
+		if (dblImageScale != 1.0 && pHotImages->GetScale() == 1.0)
+		{
+			pHotImages->SmoothResize(dblImageScale);
+		}
+
+		if (!pHotImages->PrepareDrawImage(ds, sizeImageDest, bFadeInactiveImages))
+		{
+			return;     // something went wrong
+		}
+	}
+
+	CFont* pOldFont;
+	if (bHorz)
+	{
+		pOldFont = SelectDefaultFont(pDC);
+	}
+	else
+	{
+		pOldFont = (CFont*)pDC->SelectObject(&(GetGlobalData()->fontVert));
+	}
+
+	if (pColdImages->GetCount() > 0)
+	{
+		// Disable fade effect for inactive buttons:
+		CMFCVisualManager::GetInstance()->SetFadeInactiveImage(FALSE);
+	}
+
+	// Draw buttons:
+	int iButton = 0;
+	for (POSITION pos = m_Buttons.GetHeadPosition(); pos != NULL; iButton++)
+	{
+		CMFCToolBarButton* pButton = (CMFCToolBarButton*)m_Buttons.GetNext(pos);
+		if (pButton == NULL)
+		{
+			break;
+		}
+
+		ASSERT_VALID(pButton);
+
+		rect = pButton->Rect();
+		CRect rectInter;
+
+		if (pButton->m_nStyle & TBBS_SEPARATOR)
+		{
+			BOOL bHorzSeparator = bHorz;
+			CRect rectSeparator; rectSeparator.SetRectEmpty();
+
+			OnCalcSeparatorRect(pButton, rectSeparator, bHorz);
+
+			if (pButton->m_bWrap && bHorz)
+			{
+				bHorzSeparator = FALSE;
+			}
+
+			if (rectInter.IntersectRect(rectSeparator, rectClip) && !pButton->IsHidden())
+			{
+				DrawSeparator(pDC, rectSeparator, bHorzSeparator);
+			}
+
+			continue;
+		}
+
+		if (!rectInter.IntersectRect(rect, rectClip))
+		{
+			continue;
+		}
+
+		BOOL bHighlighted = IsButtonHighlighted(iButton);
+		BOOL bDisabled = (pButton->m_nStyle & TBBS_DISABLED) && !IsCustomizeMode();
+
+		if (pDC->RectVisible(&rect))
+		{
+			BOOL bDrawDisabledImages = FALSE;
+
+			if (bDrawImages)
+			{
+				CMFCToolBarImages* pNewImages = NULL;
+
+				if (pButton->m_bUserButton)
+				{
+					if (pButton->GetImage() >= 0)
+					{
+						pNewImages = m_pUserImages;
+					}
+				}
+				else
+				{
+					if (m_bMenuMode)
+					{
+						if (bDisabled && pDisabledMenuImages->GetCount() > 0)
+						{
+							bDrawDisabledImages = TRUE;
+							pNewImages = pDisabledMenuImages;
+						}
+						else if (pMenuImages->GetCount() > 0)
+						{
+							pNewImages = pMenuImages;
+						}
+						else
+						{
+							bDrawDisabledImages = (bDisabled && pDisabledImages->GetCount() > 0);
+							pNewImages = bDrawDisabledImages ? pDisabledImages : pHotImages;
+						}
+					}
+					else // Toolbar mode
+					{
+						bDrawDisabledImages = (bDisabled && pDisabledImages->GetCount() > 0);
+						pNewImages = bDrawDisabledImages ? pDisabledImages : pHotImages;
+
+						if (!bHighlighted && !bDrawDisabledImages && (pButton->m_nStyle & TBBS_PRESSED) == 0 && pColdImages->GetCount() > 0 && !pButton->IsDroppedDown())
+						{
+							pNewImages = pColdImages;
+						}
+					}
+				}
+
+				if (bDrawImages && pNewImages != pImages && pNewImages != NULL)
+				{
+					pImages->EndDrawImage(ds);
+
+					pNewImages->SetTransparentColor(GetGlobalData()->clrBtnFace);
+					if (dblImageScale != 1.0 && pNewImages->GetScale() == 1.0)
+					{
+						pNewImages->SmoothResize(dblImageScale);
+					}
+
+					pNewImages->PrepareDrawImage(ds, sizeImageDest, bFadeInactiveImages);
+
+					pImages = pNewImages;
+				}
+			}
+
+			DrawButton(pDC, pButton, bDrawImages ? pImages : NULL, bHighlighted, bDrawDisabledImages);
+		}
+	}
+
+	// Highlight selected button in the toolbar customization mode:
+	if (m_iSelected >= m_Buttons.GetCount())
+	{
+		m_iSelected = -1;
+	}
+
+	if ((IsCustomizeMode() || m_bAltCustomizeMode) && m_iSelected >= 0 && !m_bLocked && m_pSelToolbar == this)
+	{
+		CMFCToolBarButton* pSelButton = GetButton(m_iSelected);
+		ENSURE(pSelButton != NULL);
+
+		if (pSelButton != NULL && pSelButton->CanBeStored())
+		{
+			CRect rectDrag1 = pSelButton->Rect();
+
+			pDC->Draw3dRect(&rectDrag1, GetGlobalData()->clrBtnText, GetGlobalData()->clrBtnText);
+			rectDrag1.DeflateRect(1, 1);
+			pDC->Draw3dRect(&rectDrag1, GetGlobalData()->clrBtnText, GetGlobalData()->clrBtnText);
+		}
+	}
+
+	if (IsCustomizeMode() && m_iDragIndex >= 0 && !m_bLocked)
+	{
+		DrawDragCursor(pDC);
+	}
+
+	pDC->SelectObject(pOldFont);
+
+	if (bDrawImages)
+	{
+		pImages->EndDrawImage(ds);
+	}
+
+	CMFCVisualManager::GetInstance()->SetFadeInactiveImage(bFadeInactiveImages);
+}
+
+
 
 BEGIN_MESSAGE_MAP(CCheckResultViewBar, CDockablePane)
 //	ON_WM_ERASEBKGND()
@@ -1163,6 +1532,7 @@ BEGIN_MESSAGE_MAP(CCheckResultViewBar, CDockablePane)
 	ON_COMMAND(ID_CHKRESAVERET, OnSaveRet)
 	ON_COMMAND(ID_LOADALLCHKRES, OnLoadRets)
 	ON_MESSAGE(MESSAGE_CLICKICON, OnClickIcon)
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -1217,7 +1587,7 @@ int CCheckResultViewBar::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	dumy.SetRectEmpty();
 
 	m_listCtrl.Create(
-		WS_CHILD|WS_VISIBLE|WS_BORDER|LVS_REPORT|LVS_SHOWSELALWAYS,
+		WS_CHILD | WS_VISIBLE | WS_BORDER | LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED,
 		dumy, this, ID_LIST_CHKRES);
 
 // 	m_listCtrl.SetExtendedStyle
@@ -3023,3 +3393,18 @@ LRESULT CCheckResultViewBar::OnClickIcon(WPARAM wParam, LPARAM lParam)
 	}
 	return 0;
 }
+
+HBRUSH CCheckResultViewBar::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDockablePane::OnCtlColor(pDC, pWnd, nCtlColor);
+
+	pDC->SetTextColor(RGB(255, 255, 255));
+	m_brush.CreateSolidBrush(RGB(50, 50, 50));
+	return m_brush;
+	// TODO:  Change any attributes of the DC here
+
+	// TODO:  Return a different brush if the default is not desired
+	return hbr;
+}
+
+
