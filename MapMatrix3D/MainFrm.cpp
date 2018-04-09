@@ -1092,10 +1092,10 @@ BOOL CMainFrame::CreateDockingWindows()
 	//m_wndCollectionView.GetDefaultPaneDivider()->SetAutoHideMode(FALSE);
 	//m_wndPropertiesBar.GetDefaultPaneDivider()->SetAutoHideMode(FALSE);
 
-	//DockPane(&m_wndOpSettingBar);
+	DockPane(&m_wndOpSettingBar);
 	//DockPane(&m_wndOutputBar);
 	//DockPane(&m_wndCheckSchemeViewBar);
-	//DockPane(&m_wndCheckResultBar);
+	DockPane(&m_wndCheckResultBar);
 
 	//m_wndOpSettingBar.DockToWindow(&m_wndPropertiesBar, CBRS_BOTTOM);
 	//m_wndCollectionView.DockToWindow(&m_wndProjectView, CBRS_BOTTOM);
